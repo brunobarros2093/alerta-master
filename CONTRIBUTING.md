@@ -64,10 +64,10 @@ remoção). Vale sempre o fato mais recente.
 
 Regras que os testes conferem:
 
-- **Pessoa** precisa de nome e sobrenome (uma palavra só, como "Ratinho", casaria com meio mundo).
-- **Nome comum** (Augusto Lima, Paulo Henrique Costa): ponha `"exige_contexto": true`.
-- **Perfis** (`redes`) só com `fonte_redes` comprovando: item do Wikidata ou link do site oficial. Nunca chute um
-  @ e nunca ponha perfil de pessoa privada (parentes, funcionários).
+- **A extensão só reconhece perfis e sites**, nunca nomes no texto. Um veículo sem `redes` nem `dominios` é
+  recusado, porque nunca seria encontrado.
+- **Perfis** (`redes`) só com `fonte_redes` comprovando: o site oficial (o rodapé lista as redes) ou o item do
+  Wikidata. Nunca chute um @ e nunca ponha perfil de pessoa privada (parentes, funcionários).
 - **Domínios** sem `https://` e sem `www.`.
 - Nenhum nome, perfil ou domínio pode estar em duas fichas.
 - Toda ficha tem `defesa`. Se a pessoa não falou, diga isso.
@@ -77,9 +77,8 @@ Regras que os testes conferem:
 Na tela de opções da extensão, *Copiar para relatar* gera um JSON com os enganos marcados. Abra uma issue com ele.
 Se o mesmo engano aparece com frequência, a correção vai para a lista pública:
 
-- homônimo: frase típica em `nao_e_quando` da ficha (ex.: `"basquete"` para o jogador Augusto Lima);
-- nome que dispara fora do caso: `"exige_contexto": true`;
-- perfil errado: remover de `redes`.
+- perfil ou site que não é do veículo: remover de `redes` ou `dominios`;
+- post de um perfil certo coberto no lugar errado (ex.: estrutura nova do X): issue de código, com print.
 
 ## Antes de abrir o pull request
 

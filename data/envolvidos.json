@@ -151,7 +151,6 @@
       "apelidos": [],
       "papel": "Ex-presidente do BRB (Banco de Brasília)",
       "situacao": "foi-preso",
-      "exige_contexto": true,
       "resumo": "Afastado do BRB em novembro de 2025 e preso em 16/04/2026 na 4ª fase da Compliance Zero. A PF apura corrupção e lavagem ligadas à tentativa de compra do Master pelo BRB, com R$ 146,5 milhões em vantagens negociadas. Manifestou interesse em colaborar com a Justiça.",
       "defesa": "O advogado Cleber Lopes disse que o mandado tem natureza processual, não de responsabilidade penal; Costa nega ter recebido vantagens.",
       "fontes": [
@@ -198,7 +197,6 @@
       ],
       "papel": "Ex-CEO e ex-sócio do Banco Master",
       "situacao": "foi-preso",
-      "exige_contexto": true,
       "resumo": "Preso em novembro de 2025 na 1ª fase da Compliance Zero e solto no mesmo mês com tornozeleira. Alvo de busca na 9ª fase (18/06/2026), que apura corrupção e lavagem; a PF registrou 74 ligações dele com o senador Jaques Wagner e diz que articulou a venda de carteiras do Master ao BRB.",
       "defesa": "Os advogados dizem que ele sempre atuou dentro dos limites da lei.",
       "fontes": [
@@ -215,12 +213,7 @@
           "data": "2026-06"
         }
       ],
-      "verificado_em": "2026-10-27",
-      "nao_e_quando": [
-        "augustolima7",
-        "basquete",
-        "nbb"
-      ]
+      "verificado_em": "2026-10-27"
     },
     {
       "id": "marilson-roseno-da-silva",
@@ -462,7 +455,6 @@
       "apelidos": [],
       "papel": "Publicitário e empresário",
       "situacao": "alvo-de-operacao",
-      "exige_contexto": true,
       "resumo": "Alvo da 10ª fase da Compliance Zero (09/07/2026), que apura atuação coordenada nas redes contra o Banco Central e intimidação de jornalistas e servidores. Intermediou contatos entre Flávio Bolsonaro, Mario Frias e Vorcaro sobre o filme Dark Horse.",
       "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
       "fontes": [
@@ -969,11 +961,17 @@
         "metropoles.com"
       ],
       "redes": {
+        "x": [
+          "Metropoles"
+        ],
         "instagram": [
           "metropoles"
+        ],
+        "tiktok": [
+          "metropolesoficial"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q56350071",
+      "fonte_redes": "https://www.metropoles.com/",
       "fontes": [
         {
           "veiculo": "Bahia Notícias",
@@ -1011,11 +1009,17 @@
         "x": [
           "DCM_online"
         ],
+        "instagram": [
+          "diariodocentrodomundo"
+        ],
+        "facebook": [
+          "diariodocentrodomundo"
+        ],
         "tiktok": [
           "dcmonline"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q18245849",
+      "fonte_redes": "https://www.diariodocentrodomundo.com.br/",
       "fontes": [
         {
           "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
@@ -1051,7 +1055,7 @@
           "estadao"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q1628345",
+      "fonte_redes": "https://www.estadao.com.br/",
       "fontes": [
         {
           "veiculo": "Metrópoles",
@@ -1089,7 +1093,7 @@
           "CartaCapital"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q5047031",
+      "fonte_redes": "https://www.cartacapital.com.br/",
       "fontes": [
         {
           "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
@@ -1113,16 +1117,22 @@
       ],
       "redes": {
         "x": [
-          "cnnbrasil"
+          "CNNBrasil"
         ],
         "instagram": [
           "cnnbrasil"
         ],
         "facebook": [
           "cnnbrasil"
+        ],
+        "tiktok": [
+          "cnnbrasil"
+        ],
+        "youtube": [
+          "CNNbrasil"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q61037218",
+      "fonte_redes": "https://www.cnnbrasil.com.br/",
       "fontes": [
         {
           "veiculo": "SRZD",
@@ -1152,17 +1162,20 @@
       ],
       "redes": {
         "x": [
-          "valor_economico",
-          "valoreconomico"
+          "valoreconomico",
+          "valor_economico"
         ],
         "instagram": [
           "valoreconomico"
         ],
         "facebook": [
           "valoreconomico"
+        ],
+        "youtube": [
+          "valoreconomico"
         ]
       },
-      "fonte_redes": "https://www.wikidata.org/wiki/Q958931",
+      "fonte_redes": "https://valor.globo.com/",
       "fontes": [
         {
           "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
@@ -1191,7 +1204,19 @@
           "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
         }
       ],
-      "verificado_em": "2026-10-27"
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "BrazilJournal"
+        ],
+        "instagram": [
+          "braziljournal"
+        ],
+        "facebook": [
+          "braziljournalnews"
+        ]
+      },
+      "fonte_redes": "https://braziljournal.com/"
     },
     {
       "id": "istoe",
@@ -1213,7 +1238,17 @@
           "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
         }
       ],
-      "verificado_em": "2026-10-27"
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "RevistaISTOE",
+          "RevistaDinheiro"
+        ],
+        "facebook": [
+          "istoedinheiro"
+        ]
+      },
+      "fonte_redes": "https://istoe.com.br/"
     },
     {
       "id": "conjur",
@@ -1234,7 +1269,22 @@
           "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
         }
       ],
-      "verificado_em": "2026-10-27"
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "ConJur_Oficial"
+        ],
+        "instagram": [
+          "consultor_juridico"
+        ],
+        "facebook": [
+          "ConsultorJuridico"
+        ],
+        "youtube": [
+          "tvconjur"
+        ]
+      },
+      "fonte_redes": "https://www.conjur.com.br/"
     },
     {
       "id": "reinaldo-azevedo",
@@ -1278,7 +1328,6 @@
       "apelidos": [],
       "papel": "Jornalista de celebridades",
       "situacao": "patrocinado",
-      "exige_contexto": true,
       "resumo": "Declarou que a empresa dele recebeu R$ 9,9 milhões em contratos de publicidade com o grupo Master.",
       "defesa": "Diz que foram contratos de publicidade.",
       "fontes": [
@@ -1383,7 +1432,6 @@
       "tipo": "empresa",
       "nome": "Banco Master",
       "apelidos": [],
-      "casar_nome": false,
       "papel": "Banco de Daniel Vorcaro (antigo Banco Máxima)",
       "situacao": "liquidada",
       "resumo": "Liquidado pelo Banco Central em 18/11/2025, no dia da 1ª fase da Compliance Zero. O FGC estima cerca de R$ 52 bilhões em garantias a pagar pelas liquidações do grupo.",
@@ -1658,7 +1706,6 @@
       "tipo": "empresa",
       "nome": "Banco de Brasília",
       "apelidos": [],
-      "casar_nome": false,
       "papel": "Banco público do Distrito Federal (BRB)",
       "situacao": "citado",
       "resumo": "Comprou mais de R$ 12 bilhões em carteiras de crédito do Master e tentou comprar o banco, operação vetada pelo Banco Central. O ex-presidente Paulo Henrique Costa foi preso. Os clientes do BRB não têm relação com o caso.",
@@ -1846,7 +1893,6 @@
           "data": "2026-07-31"
         }
       ],
-      "exige_contexto": true,
       "redes": {
         "x": [
           "costa_rui"
@@ -1997,7 +2043,6 @@
           "data": "2026-10"
         }
       ],
-      "exige_contexto": true,
       "verificado_em": "2026-10-27"
     },
     {
@@ -2208,7 +2253,6 @@
           "data": "2026-07-21"
         }
       ],
-      "exige_contexto": true,
       "redes": {
         "instagram": [
           "diegocoronel.oficial"
@@ -2442,7 +2486,6 @@
           "data": "2026-07-21"
         }
       ],
-      "exige_contexto": true,
       "verificado_em": "2026-10-27"
     },
     {
@@ -2638,7 +2681,6 @@
           "data": "2026-09-01"
         }
       ],
-      "exige_contexto": true,
       "verificado_em": "2026-10-27"
     },
     {
@@ -2676,7 +2718,6 @@
           "data": "2026-09-01"
         }
       ],
-      "exige_contexto": true,
       "redes": {
         "x": [
           "fabiofaria5555"

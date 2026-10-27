@@ -13,7 +13,7 @@ com você.
 
 ## O que já está protegido
 
-- **Nada sai do navegador.** A extensão lê o texto das páginas só localmente. Não há telemetria, conta, servidor
+- **Nada sai do navegador.** A extensão lê só o link do autor de cada post e o endereço do site, localmente. Não há telemetria, conta, servidor
   próprio nem coleta de dados.
 - **Única requisição de rede**: baixar `data/envolvidos.json` deste repositório. A lista baixada passa pela mesma
   validação dos testes (tipos, tamanhos, `https://` em todo link, teto de 2 MB e de 3.000 fichas) e não substitui a

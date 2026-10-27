@@ -48,6 +48,12 @@
     salvar();
   });
 
+  $('alcance').value = config.alcance;
+  $('alcance').addEventListener('change', () => {
+    config.alcance = $('alcance').value;
+    salvar();
+  });
+
   for (const [chave, s] of Object.entries(AM.SITUACOES)) {
     const select = el('select', { id: `acao-${chave}` }, AM.ACOES.map((a) => el('option', { value: a, selected: config.acoes[chave] === a }, ROTULO_ACAO[a])));
     select.addEventListener('change', () => {

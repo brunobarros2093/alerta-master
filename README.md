@@ -17,9 +17,9 @@
 
 ---
 
-O Alerta Master é uma extensão gratuita e de código aberto. Quando um post, notícia, perfil ou site cita alguém
-ligado ao caso Banco Master, ela mostra um aviso com **o que aconteceu**, **a fonte** e **a versão da pessoa ou
-empresa**. Você decide se quer ver o conteúdo, só marcar ou ignorar.
+O Alerta Master é uma extensão gratuita e de código aberto. Quando um post é **publicado por um veículo de imprensa
+ligado ao caso Banco Master**, ou quando você abre o site dele, ela cobre o conteúdo com um aviso: **o que
+aconteceu**, **a fonte**, **a versão do veículo** e qual perfil ou site foi reconhecido. Você decide se quer ver.
 
 > **Investigação não é condenação.** Até a data da lista, ninguém foi condenado no caso. A extensão informa; quem
 > decide o que ler é você.
@@ -28,10 +28,12 @@ empresa**. Você decide se quer ver o conteúdo, só marcar ou ignorar.
 
 | | |
 |---|---|
-| 🧾 **Posts e notícias** | Em X, Facebook, Instagram, Reddit, YouTube, Google e sites de notícia, o post que cita alguém da lista fica coberto por um card com a situação, o nome e o botão **Mostrar**. No modo *Só marcar*, vira um selo pequeno no canto. |
-| 👤 **Perfis e sites** | Abriu o perfil (pelo @) ou o site de alguém da lista? Aparece um aviso no topo da página. |
+| 🧾 **Posts** | No X, Instagram, Facebook e YouTube, o post cujo **autor** é um perfil da lista fica coberto por um card com a situação, o perfil (ex.: "Perfil: @CNNBrasil") e o botão **Mostrar**. No modo *Só marcar*, vira um selo pequeno no canto. |
+| 🎯 **Sem falso positivo por palavra** | A extensão não lê o texto procurando nomes: uma resposta, citação ou menção a alguém da lista não é afetada. Só conta quem publicou. |
+| 🌐 **Sites** | Abriu o site de um veículo da lista? Aparece um aviso no topo. Na busca do Google, o resultado que leva a esse site fica coberto. |
+| 👥 **Alcance** | Por padrão, só veículos de imprensa. Nas opções dá para incluir também os perfis das pessoas e empresas da lista. |
 | ❓ **Por quê?** | Abre a ficha: resumo, versão do citado, fontes e data da última conferência. |
-| 🙅 **É engano** | Tira a marcação só daquele post, daquele nome no site, ou em todo lugar. Fica só no seu navegador; enganos recorrentes viram correção para todos. |
+| 🙅 **É engano** | Tira a marcação só daquele post, daquele perfil no site, ou em todo lugar. Fica só no seu navegador; enganos recorrentes viram correção para todos. |
 | ⚙️ **Você manda** | Para cada situação: *Esconder*, *Só marcar* ou *Ignorar*. Dá para desligar em sites específicos. |
 | 🔒 **Privacidade** | Nada sai do seu navegador. A única requisição é baixar a lista deste repositório. |
 
@@ -51,8 +53,8 @@ Da mais grave à mais leve. Cada ficha usa a mais grave que **já aconteceu**, n
 | Citado no caso | Esconder |
 | Aparece em registros ligados a Vorcaro (agenda, voo, doação declarada, votação, encontro) | Esconder |
 
-Veículos de imprensa são reconhecidos pelo **site e pelos perfis**, nunca pelo nome escrito no texto: "segundo o
-Estadão" não ganha selo. Nomes comuns só disparam quando o texto também fala do caso.
+Perfis oficiais de cada veículo vêm do próprio site dele (rodapé) ou do Wikidata, e cada ficha guarda o link que
+comprova.
 
 ## Instalar
 
@@ -110,7 +112,7 @@ Para ver o aviso funcionando sem instalar a extensão, sirva a pasta (`python -m
 | Caminho | O que é |
 |---|---|
 | `data/envolvidos.json` | A lista: fichas com situação, resumo, defesa, fontes, perfis e sites |
-| `src/nucleo.js` | Busca de nomes, perfis e domínios, decisão e validação (usado pela extensão e pelos testes) |
+| `src/nucleo.js` | Busca por perfil e por site, decisão e validação (usado pela extensão e pelos testes) |
 | `src/conteudo.js`, `src/conteudo.css` | O que roda nas páginas (aviso em Shadow DOM) |
 | `src/fundo.js` | Guarda a lista e os enganos, baixa a lista atualizada |
 | `src/opcoes.*` | Configurações, enganos e a lista com as fontes |
@@ -124,14 +126,11 @@ Para ver o aviso funcionando sem instalar a extensão, sirva a pasta (`python -m
 
 | Campo | Para quê |
 |---|---|
-| `nome`, `apelidos` | Nomes que disparam o aviso (sem diferença de acento ou maiúscula) |
+| `nome`, `apelidos` | Como aparece no aviso e na busca da tela de opções |
 | `redes`, `fonte_redes` | Perfis em X, Instagram, Facebook, TikTok, YouTube e Threads, e o link que os comprova |
 | `dominios` | Sites do veículo ou da empresa |
 | `situacao` | Uma das nove situações acima |
 | `resumo`, `defesa`, `fontes` | O que aconteceu, a versão do citado e onde foi publicado |
-| `exige_contexto` | Nome comum: só dispara se o trecho também falar do caso |
-| `nao_e_quando` | Frases que indicam homônimo (ex.: "basquete" para o jogador Augusto Lima) |
-| `casar_nome` | `false` para não casar pelo nome no texto |
 
 </details>
 

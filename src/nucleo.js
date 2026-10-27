@@ -3,7 +3,7 @@
 (function (raiz) {
   'use strict';
 
-  // A ordem define qual rótulo aparece quando um mesmo trecho cita várias fichas: vale a mais grave.
+  // A ordem define qual rótulo aparece quando um mesmo post casa com várias fichas: vale a mais grave.
   const SITUACOES = {
     'foi-preso': { ordem: 0, rotulo: 'Foi preso no caso Master', acao: 'esconder' },
     'alvo-de-operacao': { ordem: 1, rotulo: 'Alvo de operação da PF no caso Master', acao: 'esconder' },
@@ -19,6 +19,8 @@
   const ACOES = ['esconder', 'marcar', 'ignorar'];
   const TIPOS = ['pessoa', 'veiculo', 'empresa'];
   const ESCOPOS_ENGANO = ['post', 'site', 'sempre'];
+  // Quais fichas a extensão procura: só veículos de imprensa (padrão) ou todas as que têm perfil ou site.
+  const ALCANCES = ['veiculos', 'todos'];
   const REDES = {
     x: ['x.com', 'twitter.com'],
     instagram: ['instagram.com'],
@@ -27,9 +29,6 @@
     youtube: ['youtube.com'],
     threads: ['threads.net']
   };
-  // Nomes comuns (exige_contexto) só disparam se o mesmo trecho falar do caso.
-  const CONTEXTO = ['master', 'vorcaro', 'brb', 'compliance zero', 'reag', 'pf', 'policia federal', 'banco central', 'rioprevidencia', 'stf'];
-
   const REDE_POR_HOST = {};
   for (const [rede, hosts] of Object.entries(REDES)) for (const h of hosts) REDE_POR_HOST[h] = rede;
 
@@ -43,7 +42,6 @@
     apelidos: 10,
     perfisPorRede: 5,
     dominios: 10,
-    excecoes: 20,
     fontes: 10,
     texto: { nome: 120, papel: 200, resumo: 600, defesa: 600, aviso: 600, titulo: 300, veiculo: 120, url: 500, termo: 120 }
   };
@@ -53,21 +51,33 @@
     return String(texto).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
   }
 
-  function escapar(s) {
-    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
-
-  function regexDeTermos(termos) {
-    const ordenados = [...termos].sort((a, b) => b.length - a.length).map(escapar);
-    return new RegExp('(?<![a-z0-9_])(' + ordenados.join('|') + ')(?![a-z0-9_])', 'g');
-  }
-
   function hostBase(host) {
     return String(host).toLowerCase().replace(/^(www|m|mobile|web)\./, '');
   }
 
-  function casaNome(e) {
-    return e.casar_nome ?? e.tipo !== 'veiculo';
+  function lerUrl(href) {
+    try {
+      const url = new URL(href);
+      return /^https?:$/.test(url.protocol) ? url : null;
+    } catch {
+      return null;
+    }
+  }
+
+  // Perfil de rede social a partir do link dele: https://x.com/CNNBrasil/status/1 → { rede: 'x', perfil: 'cnnbrasil' }.
+  function perfilDaUrl(href) {
+    const url = lerUrl(href);
+    if (!url) return null;
+    const rede = REDE_POR_HOST[hostBase(url.hostname)];
+    if (!rede) return null;
+    let perfil = url.pathname.split('/').filter(Boolean)[0] || '';
+    try {
+      perfil = decodeURIComponent(perfil);
+    } catch {
+      // "%" solto no endereço: segue com o texto cru em vez de derrubar a varredura da página.
+    }
+    perfil = perfil.replace(/^@/, '').toLowerCase();
+    return perfil ? { rede, perfil } : null;
   }
 
   // Assinatura curta de um trecho, para o "é engano" valer só para aquele post.
@@ -81,73 +91,38 @@
     return h.toString(16).padStart(8, '0');
   }
 
-  function criarBuscador(envolvidos) {
-    const porTermo = new Map();
-    const porHandle = {};
+  // A extensão não procura nomes no texto (marcaria toda resposta ou citação): só o AUTOR do post
+  // (perfil na rede social) e o SITE de destino.
+  function criarBuscador(envolvidos, { alcance = 'veiculos' } = {}) {
+    const porPerfil = {};
     const dominios = [];
     for (const e of envolvidos) {
-      if (casaNome(e)) for (const t of [e.nome, ...(e.apelidos || [])]) porTermo.set(normalizar(t), e);
-      for (const [rede, handles] of Object.entries(e.redes || {})) {
-        porHandle[rede] = porHandle[rede] || new Map();
-        for (const h of handles) {
-          porHandle[rede].set(h.toLowerCase(), e);
-          porTermo.set('@' + h.toLowerCase(), e);
-        }
+      if (alcance === 'veiculos' && e.tipo !== 'veiculo') continue;
+      for (const [rede, perfis] of Object.entries(e.redes || {})) {
+        porPerfil[rede] = porPerfil[rede] || new Map();
+        for (const p of perfis) porPerfil[rede].set(p.toLowerCase(), e);
       }
       for (const d of e.dominios || []) dominios.push([d, e]);
     }
-    const termos = porTermo.size ? regexDeTermos(porTermo.keys()) : null;
-    const contexto = regexDeTermos(CONTEXTO);
 
-    function filtrarPorTexto(achados, t) {
-      return achados.filter((e) => {
-        if (e.exige_contexto && !t.match(contexto)) return false;
-        return !(e.nao_e_quando || []).some((frase) => t.includes(normalizar(frase)));
-      });
+    function doPerfil(rede, perfil) {
+      const e = porPerfil[rede] && porPerfil[rede].get(String(perfil).replace(/^@/, '').toLowerCase());
+      return e ? [e] : [];
     }
 
-    function noTexto(texto) {
-      if (!termos) return [];
-      const t = normalizar(texto);
-      const achados = new Map();
-      for (const m of t.matchAll(termos)) {
-        const e = porTermo.get(m[1]);
-        achados.set(e.id, e);
-      }
-      return filtrarPorTexto([...achados.values()], t);
+    function doLinkDePerfil(href) {
+      const p = perfilDaUrl(href);
+      return p ? doPerfil(p.rede, p.perfil) : [];
     }
 
-    // hostPagina: links internos do próprio site não contam como "link para o domínio",
-    // senão toda manchete de um portal marcado levaria selo dentro do próprio portal.
-    function naUrl(href, hostPagina) {
-      let url;
-      try {
-        url = new URL(href);
-      } catch {
-        return [];
-      }
-      if (!/^https?:$/.test(url.protocol)) return [];
+    function doSite(href) {
+      const url = lerUrl(href);
+      if (!url) return [];
       const host = hostBase(url.hostname);
-      const achados = [];
-      if (!hostPagina || host !== hostBase(hostPagina)) {
-        for (const [d, e] of dominios) if (host === d || host.endsWith('.' + d)) achados.push(e);
-      }
-      const rede = REDE_POR_HOST[host];
-      if (rede && porHandle[rede]) {
-        let primeiro = url.pathname.split('/').filter(Boolean)[0] || '';
-        try {
-          primeiro = decodeURIComponent(primeiro);
-        } catch {
-          // "%" solto no endereço: segue com o texto cru em vez de derrubar a varredura da página.
-        }
-        primeiro = primeiro.replace(/^@/, '').toLowerCase();
-        const e = porHandle[rede].get(primeiro);
-        if (e) achados.push(e);
-      }
-      return achados;
+      return dominios.filter(([d]) => host === d || host.endsWith('.' + d)).map(([, e]) => e);
     }
 
-    return { noTexto, naUrl, filtrarPorTexto };
+    return { doPerfil, doLinkDePerfil, doSite };
   }
 
   function semDuplicados(achados) {
@@ -174,7 +149,7 @@
   function configPadrao() {
     const acoes = {};
     for (const [k, s] of Object.entries(SITUACOES)) acoes[k] = s.acao;
-    return { ativo: true, acoes, sitesIgnorados: [], urlLista: '' };
+    return { ativo: true, alcance: 'veiculos', acoes, sitesIgnorados: [], urlLista: '' };
   }
 
   function mesclarConfig(salva) {
@@ -182,6 +157,7 @@
     const c = Object.assign({}, padrao, salva || {});
     c.acoes = Object.assign({}, padrao.acoes, (salva && salva.acoes) || {});
     for (const k of Object.keys(c.acoes)) if (!ACOES.includes(c.acoes[k])) c.acoes[k] = padrao.acoes[k];
+    if (!ALCANCES.includes(c.alcance)) c.alcance = padrao.alcance;
     return c;
   }
 
@@ -213,10 +189,9 @@
       };
       teto('apelidos', LIMITES.apelidos);
       teto('dominios', LIMITES.dominios);
-      teto('nao_e_quando', LIMITES.excecoes);
       teto('fontes', LIMITES.fontes);
-      for (const t of [...(Array.isArray(e.apelidos) ? e.apelidos : []), ...(Array.isArray(e.nao_e_quando) ? e.nao_e_quando : [])]) {
-        if (typeof t !== 'string' || t.length > LIMITES.texto.termo) erro(`apelido ou exceção precisa ser texto de até ${LIMITES.texto.termo} caracteres`);
+      for (const t of Array.isArray(e.apelidos) ? e.apelidos : []) {
+        if (typeof t !== 'string' || t.length > LIMITES.texto.termo) erro(`apelido precisa ser texto de até ${LIMITES.texto.termo} caracteres`);
       }
       if ('redes' in e && (typeof e.redes !== 'object' || e.redes === null || Array.isArray(e.redes))) {
         erro('redes precisa ser um objeto { rede: [perfis] }');
@@ -235,18 +210,7 @@
       if (typeof e.resumo !== 'string' || e.resumo.length < 20 || e.resumo.length > 600) erro('resumo precisa ter de 20 a 600 caracteres');
       if (!DATA.test(e.verificado_em || '')) erro('verificado_em precisa ser AAAA-MM-DD');
       if (!Array.isArray(e.apelidos)) erro('apelidos precisa ser uma lista (pode ser vazia)');
-      for (const campo of ['casar_nome', 'exige_contexto']) if (campo in e && typeof e[campo] !== 'boolean') erro(`${campo} precisa ser true ou false`);
-      if ('nao_e_quando' in e && !(Array.isArray(e.nao_e_quando) && e.nao_e_quando.every((f) => typeof f === 'string' && f.trim().length >= 3))) {
-        erro('nao_e_quando precisa ser uma lista de frases com 3 ou mais letras');
-      }
-      const nomes = [e.nome, ...(Array.isArray(e.apelidos) ? e.apelidos : [])].filter((n) => typeof n === 'string');
-      for (const n of nomes) {
-        const t = normalizar(n);
-        // Nome de pessoa com uma palavra só ("Ratinho", "Lula") casaria com meio mundo.
-        if (e.tipo === 'pessoa' && t.split(' ').length < 2) erro(`"${n}" precisa ter nome e sobrenome`);
-        if (t.length < 5) erro(`"${n}" é curto demais para casar com segurança`);
-        if (casaNome(e)) usar(t, e.id);
-      }
+      if (typeof e.nome === 'string') usar(`nome:${normalizar(e.nome)}`, e.id);
       const redes = e.redes || {};
       for (const [rede, handles] of Object.entries(redes)) {
         if (!REDES[rede]) erro(`rede desconhecida: ${rede} (use ${Object.keys(REDES).join(', ')})`);
@@ -265,7 +229,8 @@
         if (!DOMINIO.test(d)) erro(`domínio inválido: ${d} (sem https://, sem www.)`);
         else usar(`dominio:${d}`, e.id);
       }
-      if (!casaNome(e) && !Object.keys(redes).length && !(e.dominios || []).length) erro('sem nome, perfil ou domínio para casar');
+      // Veículo sem perfil nem site nunca seria encontrado pela extensão.
+      if (e.tipo === 'veiculo' && !Object.keys(redes).length && !(e.dominios || []).length) erro('veículo precisa de perfil (redes) ou site (dominios)');
       if (!Array.isArray(e.fontes) || !e.fontes.length) erro('precisa de ao menos uma fonte');
       else {
         for (const f of e.fontes) {
@@ -282,8 +247,8 @@
   }
 
   const api = {
-    SITUACOES, ACOES, TIPOS, REDES, ESCOPOS_ENGANO, LIMITES, TAMANHO_MAXIMO_LISTA,
-    normalizar, hostBase, assinatura, criarBuscador, decidir, maisGrave, semDuplicados,
+    SITUACOES, ACOES, TIPOS, REDES, ESCOPOS_ENGANO, ALCANCES, LIMITES, TAMANHO_MAXIMO_LISTA,
+    normalizar, hostBase, perfilDaUrl, assinatura, criarBuscador, decidir, maisGrave, semDuplicados,
     configPadrao, mesclarConfig, validarLista
   };
   if (typeof module === 'object' && module.exports) module.exports = api;

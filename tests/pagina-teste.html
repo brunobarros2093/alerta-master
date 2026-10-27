@@ -7,17 +7,23 @@
   <!--
     Teste manual do script de conteúdo sem instalar a extensão.
     Sirva a raiz do projeto (ex.: python -m http.server 8765) e abra /tests/pagina-teste.html.
-    A API do navegador é simulada abaixo; os enganos ficam no localStorage desta página.
+    Parâmetros: ?site=google.com imita a busca do Google (padrão: imita o X); ?marcar troca tudo para "Só marcar";
+    ?todos inclui pessoas e empresas além dos veículos. Os enganos ficam no localStorage desta página.
   -->
   <link rel="stylesheet" href="../src/conteudo.css">
   <style>
     body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; background: #fafafa; color: #111; }
     article, .g { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 12px 14px; margin: 12px 0; }
-    .autor { font-weight: 600; }
+    article { display: flex; gap: 10px; cursor: pointer; }
+    .avatar { width: 40px; height: 40px; border-radius: 50%; background: #999; flex: none; }
+    .citado { border: 1px solid #ddd; border-radius: 10px; padding: 8px 10px; margin-top: 8px; }
     small { color: #666; }
   </style>
   <script>
     (function () {
+      const parametros = new URLSearchParams(location.search);
+      // Só a página de teste define isto; na extensão o script de conteúdo não enxerga variáveis da página.
+      globalThis.ALERTA_MASTER_HOST_TESTE = parametros.get('site') || 'x.com';
       const chave = 'am_enganos';
       const ouvintes = [];
       const lerEnganos = () => JSON.parse(localStorage.getItem(chave) || '[]');
@@ -27,9 +33,8 @@
             console.log('[AlertaMaster]', JSON.stringify(msg));
             if (msg.tipo === 'estado') {
               const lista = await (await fetch('../data/envolvidos.json')).json();
-              // ?marcar simula quem trocou todas as situações para "Só marcar" nas opções.
-              const config = AlertaMaster.mesclarConfig();
-              if (new URLSearchParams(location.search).has('marcar')) for (const k in config.acoes) config.acoes[k] = 'marcar';
+              const config = AlertaMaster.mesclarConfig({ alcance: parametros.has('todos') ? 'todos' : 'veiculos' });
+              if (parametros.has('marcar')) for (const k in config.acoes) config.acoes[k] = 'marcar';
               return { lista, enganos: lerEnganos(), config };
             }
             if (msg.tipo === 'engano') {
@@ -48,45 +53,67 @@
 </head>
 <body>
   <h1>Feed de teste</h1>
-  <p><small>Recarregue com <code>localStorage.clear()</code> no console para apagar os "é engano".</small></p>
+  <p><small>Imita o X. <a href="?site=google.com">Ver como busca do Google</a> · <code>localStorage.clear()</code> apaga os "é engano".</small></p>
 
-  <article>
-    <div class="autor">Portal Exemplo</div>
-    <p>Defesa de Daniel Vorcaro pede ao STF a revogação da prisão preventiva.</p>
+  <!-- Post da própria CNN Brasil: deve ser coberto, com "Perfil: @cnnbrasil". -->
+  <article data-testid="tweet" onclick="console.log('[AlertaMaster] clique vazou para o post')">
+    <div class="avatar"></div>
+    <div>
+      <div data-testid="User-Name"><a href="/CNNBrasil">CNN Brasil</a> <a href="/CNNBrasil"><small>@CNNBrasil</small></a></div>
+      <p>Sumiço de Flávio incomoda aliados, que cobram respostas.</p>
+    </div>
   </article>
 
-  <!-- Imita o post do X: avatar e conteúdo lado a lado num flex, e o post inteiro clicável. -->
-  <article style="display: flex; gap: 10px; cursor: pointer" onclick="console.log('[AlertaMaster] clique vazou para o post')">
-    <div style="width: 40px; height: 40px; border-radius: 50%; background: #999; flex: none"></div>
+  <!-- Resposta que cita Flávio Bolsonaro e menciona @CNNBrasil: NÃO deve ser coberta (o autor não está na lista). -->
+  <article data-testid="tweet">
+    <div class="avatar"></div>
     <div>
-      <div class="autor"><a href="https://x.com/HugoMottaPB">Hugo Motta</a> <small>@HugoMottaPB</small></div>
+      <div data-testid="User-Name"><a href="/rodri_ecb">rodri do bahia city</a> <a href="/rodri_ecb"><small>@rodri_ecb</small></a></div>
+      <p>Flávio Bolsonaro fugiu? Segundo a <a href="/CNNBrasil">@CNNBrasil</a>, ninguém sabe.</p>
+      <div class="citado">
+        <div data-testid="User-Name"><a href="/CNNBrasil">CNN Brasil</a> <small>@CNNBrasil</small></div>
+        Post citado da CNN dentro de outro post.
+      </div>
+    </div>
+  </article>
+
+  <!-- Pessoa da lista: só coberta com ?todos. -->
+  <article data-testid="tweet">
+    <div class="avatar"></div>
+    <div>
+      <div data-testid="User-Name"><a href="/HugoMottaPB">Hugo Motta</a> <a href="/HugoMottaPB"><small>@HugoMottaPB</small></a></div>
       <p>Hoje votamos a pauta econômica na Câmara.</p>
     </div>
   </article>
 
-  <article>
-    <div class="autor">Esportes</div>
-    <p>Augusto Lima faz 20 pontos e o Flamengo vence no basquete.</p>
+  <!-- Metrópoles: pagamento apontado como suspeito. -->
+  <article data-testid="tweet">
+    <div class="avatar"></div>
+    <div>
+      <div data-testid="User-Name"><a href="/Metropoles">Metrópoles</a> <a href="/Metropoles"><small>@Metropoles</small></a></div>
+      <p>Chuva forte deve atingir o DF neste fim de semana.</p>
+    </div>
   </article>
 
-  <article>
-    <div class="autor">Política</div>
-    <p>Segundo o Estadão, a votação fica para a próxima semana.</p>
-  </article>
-
+  <!-- Busca do Google (?site=google.com): o resultado que leva ao Estadão deve ser coberto, o do g1 não. -->
   <div class="MjjYud">
     <div class="g">
-      <a href="https://www.metropoles.com/brasil/alguma-noticia">Notícia qualquer — Metrópoles</a>
-      <p>Trecho de resultado de busca com link para um portal da lista.</p>
+      <a href="https://www.estadao.com.br/politica/alguma-noticia"><h3>Notícia qualquer — Estadão</h3></a>
+      <p>Resultado de busca que leva a um site da lista.</p>
+    </div>
+  </div>
+  <div class="MjjYud">
+    <div class="g">
+      <a href="https://g1.globo.com/politica/noticia"><h3>Notícia qualquer — g1</h3></a>
+      <p>Resultado de busca que fala da CNN Brasil e do Estadão, mas leva ao g1.</p>
     </div>
   </div>
 
-  <article>
-    <div class="autor">Notícia sem relação</div>
-    <p>Previsão do tempo: chuva forte no fim de semana em São Paulo.</p>
-  </article>
-
-  <script src="../src/nucleo.js"></script>
-  <script src="../src/conteudo.js"></script>
+  <script>
+    // Carrega sempre a versão atual dos scripts (o servidor de teste não manda cabeçalho de cache).
+    const versao = Date.now();
+    const carregar = (src) => new Promise((ok) => document.body.append(Object.assign(document.createElement('script'), { src: `${src}?${versao}`, onload: ok })));
+    carregar('../src/nucleo.js').then(() => carregar('../src/conteudo.js'));
+  </script>
 </body>
 </html>

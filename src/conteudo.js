@@ -1,11 +1,14 @@
-// Roda em cada página: procura nomes, perfis e domínios da lista e cobre ou marca o trecho.
+// Roda em cada página: cobre os posts cujo AUTOR é um perfil da lista e avisa nos sites da lista.
+// Não procura nomes no texto: uma resposta ou citação que menciona alguém não é post dele.
 (async function () {
   'use strict';
   const api = globalThis.browser ?? globalThis.chrome;
   const AM = globalThis.AlertaMaster;
   if (!AM) return;
 
-  const host = AM.hostBase(location.hostname);
+  // ALERTA_MASTER_HOST_TESTE só existe na página de teste (tests/pagina-teste.html). Na extensão o script roda
+  // num mundo isolado e não enxerga variáveis da página, então um site não consegue forjar o próprio host.
+  const host = AM.hostBase(globalThis.ALERTA_MASTER_HOST_TESTE || location.hostname);
   let estado;
   try {
     estado = await api.runtime.sendMessage({ tipo: 'estado' });
@@ -15,21 +18,27 @@
   if (!estado || !estado.lista) return;
 
   let { config, enganos } = estado;
-  const buscador = AM.criarBuscador(estado.lista.envolvidos);
+  let buscador = AM.criarBuscador(estado.lista.envolvidos, { alcance: config.alcance });
 
-  // Blocos que costumam ser "um post" ou "uma notícia". Quando dois casam, vale o mais interno.
-  const SELETOR = [
-    'article',
-    '[role="article"]',
-    '[data-testid="tweet"]',
-    'div.g',
-    'div.MjjYud',
-    'ytd-rich-item-renderer',
-    'ytd-video-renderer',
-    'ytd-compact-video-renderer',
-    'shreddit-post',
-    '[data-pagelet^="FeedUnit"]'
-  ].join(',');
+  // Em cada rede: o que é um post e onde fica o link do autor dele (o primeiro do bloco; o de um post
+  // citado vem depois).
+  const LEITORES = [
+    { hosts: ['x.com', 'twitter.com'], posts: 'article[data-testid="tweet"]', autor: '[data-testid="User-Name"] a[href]' },
+    { hosts: ['instagram.com'], posts: 'article', autor: 'header a[href]' },
+    { hosts: ['facebook.com'], posts: '[role="article"]', autor: 'h2 a[href], h3 a[href], strong a[href]' },
+    {
+      hosts: ['youtube.com'],
+      posts: 'ytd-rich-item-renderer, ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer',
+      autor: 'ytd-channel-name a[href], #channel-name a[href]'
+    }
+  ];
+  // Fora das redes, só listas de links para outros sites: o resultado some quando o link principal vai para um site da lista.
+  const LISTAS_DE_LINKS = [
+    { hosts: /(^|\.)google\.[a-z.]+$/, posts: 'div.g, div.MjjYud', link: (bloco) => (bloco.querySelector('a[href] h3') || {}).parentElement },
+    { hosts: /(^|\.)reddit\.com$/, posts: 'shreddit-post[content-href]', link: (bloco) => ({ href: bloco.getAttribute('content-href') }) }
+  ];
+  const leitor = LEITORES.find((l) => l.hosts.includes(host));
+  const lista = leitor ? null : LISTAS_DE_LINKS.find((l) => l.hosts.test(host));
 
   const ESTILO = `
     :host { all: initial; display: block; }
@@ -38,22 +47,22 @@
     :host([data-modo="marcar"]) { position: absolute; top: 8px; right: 8px; z-index: 2147483000; max-width: min(380px, calc(100% - 16px)); }
     .cobertura { position: absolute; inset: 0; box-sizing: border-box; padding: 12px; display: flex; align-items: center;
       justify-content: center; background: rgba(15, 13, 8, .45); border-radius: inherit; }
-    .cobertura .aviso { width: 100%; max-width: 480px; max-height: 100%; overflow: auto; box-sizing: border-box; margin: 0;
-      flex-direction: column; align-items: center; text-align: center; padding: 14px 16px; gap: 6px; }
+    .cobertura .aviso { width: 100%; max-width: 480px; max-height: 100%; overflow: auto; overflow-x: hidden; box-sizing: border-box;
+      margin: 0; flex-direction: column; align-items: center; text-align: center; padding: 14px 16px; gap: 6px; }
+    /* Itens centralizados não encolhem sozinhos: limita a largura para as linhas de botões quebrarem. */
+    .cobertura .aviso > * { max-width: 100%; box-sizing: border-box; }
     .cobertura .acoes { margin: 4px 0 0; justify-content: center; }
     /* No card em coluna, flex-basis viraria altura: volta ao tamanho do conteúdo. */
-    .cobertura .nota, .cobertura .engano { flex-basis: auto; }
-    /* Itens centralizados não encolhem sozinhos: limita a largura para as linhas de botões quebrarem. */
-    .cobertura .aviso { overflow-x: hidden; }
-    .cobertura .aviso > * { max-width: 100%; box-sizing: border-box; }
-    .cobertura .engano { width: 100%; }
-    .cobertura .engano { justify-content: center; }
+    .cobertura .nota, .cobertura .engano, .cobertura .origem { flex-basis: auto; }
+    .cobertura .engano { width: 100%; justify-content: center; }
     .aviso { font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #1f1a0e; background: #fff4d6;
       border: 1px solid #e0b84c; border-left: 4px solid #c7901a; border-radius: 8px; padding: 10px 12px; margin: 6px 0;
       display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
     .aviso.marcar { background: #f3f4f6; border-color: #c9ccd1; border-left-color: #6b7280; padding: 6px 10px; font-size: 13px; }
     .selo { font-weight: 700; }
     .nomes { font-weight: 600; }
+    .origem { flex-basis: 100%; font-size: 13px; color: #5b5340; }
+    .origem b { color: #1f1a0e; }
     .nota { color: #5b5340; font-size: 12px; flex-basis: 100%; }
     .marcar .nota { display: none; }
     .acoes { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
@@ -68,7 +77,8 @@
     @media (prefers-color-scheme: dark) {
       .aviso { background: #2b2412; color: #f5ecd4; border-color: #8a6a1f; border-left-color: #e0b84c; }
       .aviso.marcar { background: #23262b; color: #e5e7eb; border-color: #4b5563; border-left-color: #9ca3af; }
-      .nota { color: #cbbf9c; }
+      .nota, .origem { color: #cbbf9c; }
+      .origem b { color: #f5ecd4; }
       button { background: #1b1b1b; color: #f5ecd4; border-color: #8a6a1f; }
       button:hover { background: #3a3018; }
     }
@@ -85,12 +95,13 @@
   }
 
   function nomes(fichas) {
-    const lista = fichas.map((f) => f.nome);
-    return lista.length > 3 ? `${lista.slice(0, 3).join(', ')} e mais ${lista.length - 3}` : lista.join(', ');
+    const todos = fichas.map((f) => f.nome);
+    return todos.length > 3 ? `${todos.slice(0, 3).join(', ')} e mais ${todos.length - 3}` : todos.join(', ');
   }
 
   // Monta o aviso dentro de um Shadow DOM para o CSS do site não bagunçar (nem ser bagunçado).
-  function criarAviso({ decisao, naPagina, aoMostrar, aoEngano }) {
+  // origem = de onde veio o bloqueio, ex.: { rotulo: 'Perfil', valor: '@CNNBrasil' }.
+  function criarAviso({ decisao, origem, naPagina, aoMostrar, aoEngano }) {
     const hospedeiro = el('div', { class: 'am-host', 'data-am-host': '1', 'data-modo': naPagina ? 'pagina' : decisao.acao });
     // Sites como o X abrem o post com qualquer clique dentro dele; o clique nos botões do aviso para aqui.
     for (const tipo of ['click', 'mousedown', 'mouseup', 'pointerdown', 'pointerup', 'touchstart', 'touchend', 'keydown']) {
@@ -126,6 +137,7 @@
     const aviso = el('div', { class: `aviso ${acao}${naPagina ? ' pagina' : ''}`, role: 'note', 'aria-label': 'Alerta Master' },
       el('span', { class: 'selo' }, `⚠ ${AM.SITUACOES[principal.situacao].rotulo}:`),
       el('span', { class: 'nomes' }, nomes(fichas)),
+      origem ? el('span', { class: 'origem' }, `${origem.rotulo}: `, el('b', {}, origem.valor)) : null,
       acoes,
       nota,
       engano
@@ -142,19 +154,18 @@
     api.runtime.sendMessage({ tipo: 'engano', registros });
   }
 
-  // ---------- página inteira (site, perfil ou manchete) ----------
+  // ---------- página inteira: site de um veículo (ou empresa) da lista ----------
   let avisoPagina = null;
-  let manchete = null;
 
   function avaliarPagina() {
-    manchete = document.querySelector('h1');
-    const achados = buscador.naUrl(location.href, null).concat(buscador.noTexto(`${document.title}\n${manchete ? manchete.textContent : ''}`));
+    const achados = buscador.doSite(location.href);
     const assinatura = AM.assinatura(location.origin + location.pathname);
     const decisao = AM.decidir(achados, { config, enganos, host, assinatura });
     if (!decisao) return;
     const html = document.documentElement;
     avisoPagina = criarAviso({
       decisao,
+      origem: { rotulo: 'Site', valor: host },
       naPagina: true,
       aoMostrar: liberarPagina,
       aoEngano: (escopo) => {
@@ -172,23 +183,33 @@
     avisoPagina = null;
   }
 
-  // ---------- posts e notícias ----------
+  // ---------- posts ----------
   let vistos = new WeakMap();
 
-  function avaliarBloco(bloco) {
-    const texto = bloco.textContent || '';
-    let achados = buscador.noTexto(texto);
-    for (const a of bloco.querySelectorAll('a[href]')) achados = achados.concat(buscador.naUrl(a.href, host));
-    // Um link de perfil sozinho não passa pelas exceções de texto; aplica aqui também.
-    achados = buscador.filtrarPorTexto(AM.semDuplicados(achados), AM.normalizar(texto));
-    const assinatura = AM.assinatura(texto);
-    return { decisao: AM.decidir(achados, { config, enganos, host, assinatura }), assinatura, texto };
+  // Devolve as fichas do autor do post (redes) ou do site para onde o resultado aponta (busca, Reddit).
+  function quemPublicou(bloco) {
+    if (leitor) {
+      const link = bloco.querySelector(leitor.autor);
+      const perfil = link && AM.perfilDaUrl(link.href);
+      if (!perfil) return null;
+      return { achados: buscador.doPerfil(perfil.rede, perfil.perfil), origem: { rotulo: 'Perfil', valor: `@${perfil.perfil}` } };
+    }
+    const link = lista.link(bloco);
+    if (!link || !link.href) return null;
+    let alvo;
+    try {
+      alvo = new URL(link.href, location.href);
+    } catch {
+      return null;
+    }
+    return { achados: buscador.doSite(alvo.href), origem: { rotulo: 'Site', valor: AM.hostBase(alvo.hostname) } };
   }
 
-  function aplicar(bloco, { decisao, assinatura, texto }) {
+  function aplicar(bloco, { decisao, origem, assinatura, texto }) {
     bloco.setAttribute('data-am', decisao.acao);
     const aviso = criarAviso({
       decisao,
+      origem,
       naPagina: false,
       aoMostrar: () => liberar(bloco),
       aoEngano: (escopo) => {
@@ -207,17 +228,21 @@
   }
 
   function varrer() {
-    if (!config.ativo) return;
+    if (!config.ativo || (!leitor && !lista)) return;
     const candidatos = [];
-    for (const bloco of document.querySelectorAll(SELETOR)) {
+    for (const bloco of document.querySelectorAll((leitor || lista).posts)) {
       if (bloco.closest('[data-am]') || bloco.querySelector('[data-am]')) continue;
-      if (manchete && avisoPagina && bloco.contains(manchete)) continue;
-      const tamanho = (bloco.textContent || '').length;
-      if (tamanho < 20 || vistos.get(bloco) === tamanho) continue;
-      vistos.set(bloco, tamanho);
-      const resultado = avaliarBloco(bloco);
-      if (resultado.decisao) candidatos.push([bloco, resultado]);
+      const texto = bloco.textContent || '';
+      // Redes montam o post aos poucos: reavalia enquanto o texto cresce.
+      if (vistos.get(bloco) === texto.length) continue;
+      vistos.set(bloco, texto.length);
+      const autoria = quemPublicou(bloco);
+      if (!autoria || !autoria.achados.length) continue;
+      const assinatura = AM.assinatura(texto);
+      const decisao = AM.decidir(autoria.achados, { config, enganos, host, assinatura });
+      if (decisao) candidatos.push([bloco, { decisao, origem: autoria.origem, assinatura, texto }]);
     }
+    // Na busca do Google um resultado pode vir dentro de outro bloco: vale o mais interno.
     for (const [bloco, resultado] of candidatos) {
       if (candidatos.some(([outro]) => outro !== bloco && bloco.contains(outro))) continue;
       aplicar(bloco, resultado);
@@ -256,8 +281,10 @@
   }
 
   api.storage.onChanged.addListener((mudancas, area) => {
-    if (area === 'sync' && mudancas.config) config = AM.mesclarConfig(mudancas.config.newValue);
-    else if (area === 'local' && mudancas.enganos) enganos = mudancas.enganos.newValue || [];
+    if (area === 'sync' && mudancas.config) {
+      config = AM.mesclarConfig(mudancas.config.newValue);
+      buscador = AM.criarBuscador(estado.lista.envolvidos, { alcance: config.alcance });
+    } else if (area === 'local' && mudancas.enganos) enganos = mudancas.enganos.newValue || [];
     else return;
     reavaliar();
   });
@@ -265,7 +292,7 @@
   if (!config.ativo || ignorado()) return;
   avaliarPagina();
   varrer();
-  new MutationObserver(agendar).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+  if (leitor || lista) new MutationObserver(agendar).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
   // Sites de página única trocam de "página" sem recarregar.
   let enderecoAnterior = location.href;
   setInterval(() => {
