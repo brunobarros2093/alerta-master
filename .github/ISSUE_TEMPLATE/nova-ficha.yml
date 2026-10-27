@@ -1,0 +1,31 @@
+name: Sugerir ficha nova
+description: Pessoa, veículo ou empresa ligada ao caso Master que ainda não está na lista.
+labels: [nova-ficha]
+body:
+  - type: markdown
+    attributes:
+      value: Leia os critérios em CONTRIBUTING.md antes. Sem fonte publicada por veículo identificável, a ficha não entra.
+  - type: input
+    id: nome
+    attributes:
+      label: Nome
+    validations:
+      required: true
+  - type: textarea
+    id: fato
+    attributes:
+      label: O que aconteceu
+      description: Fatos com datas e valores, sem opinião.
+    validations:
+      required: true
+  - type: textarea
+    id: fontes
+    attributes:
+      label: Fontes
+    validations:
+      required: true
+  - type: textarea
+    id: defesa
+    attributes:
+      label: Versão da pessoa ou empresa
+      description: O que ela disse publicamente sobre o fato. Se não achou, diga.

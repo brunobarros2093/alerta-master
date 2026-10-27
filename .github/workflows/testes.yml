@@ -1,0 +1,33 @@
+# Roda a validação da lista e os testes em todo PR e em todo push na main.
+# Usa pull_request (não pull_request_target): código de fork roda sem acesso a segredos nem escrita no repositório.
+name: testes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Actions fixadas por commit (a tag pode ser movida); o Dependabot propõe as atualizações.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Manifest e scripts sem erro de sintaxe
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('manifest.json','utf8'))"
+          for f in src/*.js; do node --check "$f"; done

@@ -31,7 +31,9 @@ async function atualizarLista() {
     try {
       const resposta = await fetch(url, { cache: 'no-store' });
       if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
-      const remota = await resposta.json();
+      const texto = await resposta.text();
+      if (texto.length > AM.TAMANHO_MAXIMO_LISTA) throw new Error('lista remota grande demais');
+      const remota = JSON.parse(texto);
       const erros = AM.validarLista(remota);
       if (erros.length) aviso = `Lista remota recusada: ${erros[0]}`;
       else if (remota.atualizado_em < embutida.atualizado_em) aviso = 'Lista remota é mais antiga que a da extensão; mantida a da extensão.';

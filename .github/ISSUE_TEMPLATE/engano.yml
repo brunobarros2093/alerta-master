@@ -1,0 +1,17 @@
+name: Engano na marcação
+description: A extensão marcou algo que não tem relação com o caso (homônimo, perfil errado...).
+labels: [engano]
+body:
+  - type: textarea
+    id: relato
+    attributes:
+      label: Enganos exportados
+      description: Na tela de opções da extensão, use "Copiar para relatar" e cole aqui.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: O que aconteceu
+      description: Ex.: "marcou notícia sobre o jogador de basquete Augusto Lima".

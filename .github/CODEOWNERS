@@ -1,0 +1,7 @@
+# Toda mudança precisa da revisão de quem mantém o projeto.
+# A lista e o código que roda no navegador das pessoas são as partes mais sensíveis.
+*                     @brunobarros2093
+/data/                @brunobarros2093
+/src/                 @brunobarros2093
+/manifest.json        @brunobarros2093
+/.github/             @brunobarros2093

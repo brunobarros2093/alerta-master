@@ -1,0 +1,33 @@
+name: Correção ou fato novo sobre uma ficha
+description: Arquivamento, absolvição, denúncia, informação errada ou desatualizada. Pedidos de quem está na lista têm prioridade.
+labels: [correcao]
+body:
+  - type: input
+    id: ficha
+    attributes:
+      label: Ficha
+      description: Nome ou id da ficha (aparece na tela de opções da extensão).
+    validations:
+      required: true
+  - type: textarea
+    id: fato
+    attributes:
+      label: O que está errado ou o que mudou
+    validations:
+      required: true
+  - type: textarea
+    id: fontes
+    attributes:
+      label: Fontes
+      description: Decisão judicial, nota oficial ou matéria publicada que sustenta a correção.
+    validations:
+      required: true
+  - type: dropdown
+    id: quem
+    attributes:
+      label: Você é
+      options:
+        - A própria pessoa ou empresa citada (ou representante)
+        - Outra pessoa
+    validations:
+      required: true

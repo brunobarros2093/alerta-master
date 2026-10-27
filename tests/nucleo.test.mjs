@@ -115,6 +115,22 @@ test('validação recusa ficha sem fonte, nome de uma palavra e termo repetido',
   assert.match(erros, /c: fonte sem url https/);
 });
 
+test('endereço com % solto não derruba a busca', () => {
+  assert.deepEqual(buscador.naUrl('https://x.com/%E0%A4%A/status/1', 'x.com'), []);
+});
+
+test('validação recusa lista com campos gigantes ou de tipo errado', () => {
+  const base = { id: 'a', tipo: 'pessoa', nome: 'Fulano de Tal', apelidos: [], papel: 'x', situacao: 'citado', resumo: 'resumo com mais de vinte letras', defesa: 'x', fontes: [{ veiculo: 'v', titulo: 't', url: 'https://a.b' }], verificado_em: '2026-10-27' };
+  const erros = (ficha, extra = {}) => AM.validarLista({ atualizado_em: '2026-10-27', ...extra, envolvidos: [ficha] }).join('\n');
+  assert.match(erros({ ...base, apelidos: Array.from({ length: 11 }, (_, i) => `Nome Numero ${i}`) }), /apelidos passa de 10/);
+  assert.match(erros({ ...base, defesa: 'x'.repeat(601) }), /defesa passa de 600/);
+  assert.match(erros({ ...base, redes: 'x' }), /redes precisa ser um objeto/);
+  assert.match(erros({ ...base, redes: { x: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6'] }, fonte_redes: 'https://w.d' }), /passa de 5 perfis/);
+  assert.match(erros(base, { aviso: 'x'.repeat(601) }), /aviso precisa ser texto/);
+  assert.match(AM.validarLista({ atualizado_em: '2026-10-27', envolvidos: [null] }).join('\n'), /ficha precisa ser um objeto/);
+  assert.match(AM.validarLista({ atualizado_em: '2026-10-27', envolvidos: new Array(3001).fill(base) }).join('\n'), /passa de 3000 fichas/);
+});
+
 test('assinatura é estável e ignora acento e espaços', () => {
   assert.equal(AM.assinatura('Olá  mundo'), AM.assinatura('ola mundo'));
   assert.notEqual(AM.assinatura('um post'), AM.assinatura('outro post'));

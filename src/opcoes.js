@@ -166,7 +166,13 @@
   });
 
   if (location.hash) {
-    const alvo = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    let id = location.hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // "#" malformado: tenta o texto cru.
+    }
+    const alvo = document.getElementById(id);
     if (alvo) alvo.scrollIntoView();
   }
 })();

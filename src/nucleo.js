@@ -37,6 +37,17 @@
   const ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
   const HANDLE = /^[A-Za-z0-9_.]{2,40}$/;
   const DOMINIO = /^[a-z0-9-]+(\.[a-z0-9-]+)+$/;
+  // Tetos para uma lista baixada (ou um PR) não conseguir travar o navegador de quem usa a extensão.
+  const LIMITES = {
+    fichas: 3000,
+    apelidos: 10,
+    perfisPorRede: 5,
+    dominios: 10,
+    excecoes: 20,
+    fontes: 10,
+    texto: { nome: 120, papel: 200, resumo: 600, defesa: 600, aviso: 600, titulo: 300, veiculo: 120, url: 500, termo: 120 }
+  };
+  const TAMANHO_MAXIMO_LISTA = 2 * 1024 * 1024;
 
   function normalizar(texto) {
     return String(texto).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
@@ -123,7 +134,13 @@
       }
       const rede = REDE_POR_HOST[host];
       if (rede && porHandle[rede]) {
-        const primeiro = decodeURIComponent(url.pathname.split('/').filter(Boolean)[0] || '').replace(/^@/, '').toLowerCase();
+        let primeiro = url.pathname.split('/').filter(Boolean)[0] || '';
+        try {
+          primeiro = decodeURIComponent(primeiro);
+        } catch {
+          // "%" solto no endereço: segue com o texto cru em vez de derrubar a varredura da página.
+        }
+        primeiro = primeiro.replace(/^@/, '').toLowerCase();
         const e = porHandle[rede].get(primeiro);
         if (e) achados.push(e);
       }
@@ -173,15 +190,42 @@
     if (!dados || typeof dados !== 'object') return ['a lista não é um objeto JSON'];
     if (!DATA.test(dados.atualizado_em || '')) erros.push('atualizado_em precisa ser AAAA-MM-DD');
     if (!Array.isArray(dados.envolvidos)) return erros.concat('envolvidos precisa ser uma lista');
+    if (dados.envolvidos.length > LIMITES.fichas) return erros.concat(`a lista passa de ${LIMITES.fichas} fichas`);
+    if ('aviso' in dados && (typeof dados.aviso !== 'string' || dados.aviso.length > LIMITES.texto.aviso)) erros.push(`aviso precisa ser texto de até ${LIMITES.texto.aviso} caracteres`);
     const ids = new Set();
     const termos = new Map();
     const usar = (chave, id) => {
       if (termos.has(chave) && termos.get(chave) !== id) erros.push(`${id}: "${chave}" já é usado por ${termos.get(chave)}`);
       termos.set(chave, id);
     };
-    for (const [i, e] of dados.envolvidos.entries()) {
-      const id = (e && e.id) || `#${i}`;
+    for (let [i, e] of dados.envolvidos.entries()) {
+      if (!e || typeof e !== 'object' || Array.isArray(e)) {
+        erros.push(`#${i}: ficha precisa ser um objeto`);
+        continue;
+      }
+      const id = typeof e.id === 'string' ? e.id.slice(0, 60) : `#${i}`;
       const erro = (msg) => erros.push(`${id}: ${msg}`);
+      for (const campo of ['nome', 'papel', 'resumo', 'defesa']) {
+        if (typeof e[campo] === 'string' && e[campo].length > LIMITES.texto[campo]) erro(`${campo} passa de ${LIMITES.texto[campo]} caracteres`);
+      }
+      const teto = (campo, max) => {
+        if (Array.isArray(e[campo]) && e[campo].length > max) erro(`${campo} passa de ${max} itens`);
+      };
+      teto('apelidos', LIMITES.apelidos);
+      teto('dominios', LIMITES.dominios);
+      teto('nao_e_quando', LIMITES.excecoes);
+      teto('fontes', LIMITES.fontes);
+      for (const t of [...(Array.isArray(e.apelidos) ? e.apelidos : []), ...(Array.isArray(e.nao_e_quando) ? e.nao_e_quando : [])]) {
+        if (typeof t !== 'string' || t.length > LIMITES.texto.termo) erro(`apelido ou exceção precisa ser texto de até ${LIMITES.texto.termo} caracteres`);
+      }
+      if ('redes' in e && (typeof e.redes !== 'object' || e.redes === null || Array.isArray(e.redes))) {
+        erro('redes precisa ser um objeto { rede: [perfis] }');
+        e = { ...e, redes: {} };
+      }
+      if ('dominios' in e && !Array.isArray(e.dominios)) {
+        erro('dominios precisa ser uma lista');
+        e = { ...e, dominios: [] };
+      }
       if (!ID.test(e.id || '')) erro('id precisa ser minúsculo-com-hifens');
       if (ids.has(e.id)) erro('id repetido');
       ids.add(e.id);
@@ -210,6 +254,7 @@
           erro(`redes.${rede} precisa ser uma lista`);
           continue;
         }
+        if (handles.length > LIMITES.perfisPorRede) erro(`redes.${rede} passa de ${LIMITES.perfisPorRede} perfis`);
         for (const h of handles) {
           if (!HANDLE.test(h)) erro(`perfil inválido em ${rede}: ${h} (sem @, sem link)`);
           else usar(`${rede}:${h.toLowerCase()}`, e.id);
@@ -226,6 +271,9 @@
         for (const f of e.fontes) {
           if (!/^https:\/\//.test((f && f.url) || '')) erro('fonte sem url https');
           if (!f || !f.veiculo || !f.titulo) erro('fonte precisa de veiculo e titulo');
+          for (const campo of ['url', 'veiculo', 'titulo']) {
+            if (f && typeof f[campo] === 'string' && f[campo].length > LIMITES.texto[campo]) erro(`${campo} da fonte passa de ${LIMITES.texto[campo]} caracteres`);
+          }
           if (f && f.data && !DATA.test(f.data)) erro(`data da fonte inválida: ${f.data}`);
         }
       }
@@ -234,7 +282,7 @@
   }
 
   const api = {
-    SITUACOES, ACOES, TIPOS, REDES, ESCOPOS_ENGANO,
+    SITUACOES, ACOES, TIPOS, REDES, ESCOPOS_ENGANO, LIMITES, TAMANHO_MAXIMO_LISTA,
     normalizar, hostBase, assinatura, criarBuscador, decidir, maisGrave, semDuplicados,
     configPadrao, mesclarConfig, validarLista
   };
