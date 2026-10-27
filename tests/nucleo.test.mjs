@@ -75,6 +75,21 @@ test('decidir respeita gravidade, ações configuradas e enganos', () => {
   assert.ok(AM.decidir([porId('hugo-motta')], { ...noSite, host: 'outro.com' }));
 });
 
+test('registro indireto só marca por padrão e perde para situação mais grave', () => {
+  const config = AM.configPadrao();
+  const porId = (id) => lista.envolvidos.find((e) => e.id === id);
+  const base = { config, enganos: [], host: 'exemplo.com', assinatura: 'x' };
+  assert.equal(config.acoes['registro-indireto'], 'marcar');
+  assert.deepEqual(ids(buscador.noTexto('Arthur Lira e Nikolas Ferreira votaram hoje')), ['arthur-lira', 'nikolas-ferreira']);
+  assert.equal(AM.decidir([porId('arthur-lira')], base).acao, 'marcar');
+  assert.equal(AM.decidir([porId('arthur-lira'), porId('ciro-nogueira')], base).fichas[0].id, 'ciro-nogueira');
+});
+
+test('nome ambíguo de registro indireto exige contexto', () => {
+  assert.deepEqual(buscador.noTexto('Rui Costa vence etapa do ciclismo em Portugal'), []);
+  assert.deepEqual(ids(buscador.noTexto('Rui Costa assinou o decreto do Credcesta; PF analisa o caso Master')), ['rui-costa']);
+});
+
 test('mesclarConfig descarta ação inválida e completa as que faltam', () => {
   const c = AM.mesclarConfig({ acoes: { 'foi-preso': 'apagar' } });
   assert.equal(c.acoes['foi-preso'], 'esconder');

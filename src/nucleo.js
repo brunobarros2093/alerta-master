@@ -12,7 +12,9 @@
     'delator': { ordem: 4, rotulo: 'Fez delação no caso Master', acao: 'marcar' },
     'liquidada': { ordem: 5, rotulo: 'Liquidada pelo Banco Central no caso Master', acao: 'marcar' },
     'patrocinado': { ordem: 6, rotulo: 'Recebeu publicidade ou patrocínio do Banco Master', acao: 'marcar' },
-    'citado': { ordem: 7, rotulo: 'Citado no caso Master', acao: 'marcar' }
+    'citado': { ordem: 7, rotulo: 'Citado no caso Master', acao: 'marcar' },
+    // Agenda, voo, manuscrito, doação declarada, votação ou encontro: o registro existe, mas sozinho não indica irregularidade.
+    'registro-indireto': { ordem: 8, rotulo: 'Aparece em registros ligados a Vorcaro', acao: 'marcar' }
   };
   const ACOES = ['esconder', 'marcar', 'ignorar'];
   const TIPOS = ['pessoa', 'veiculo', 'empresa'];

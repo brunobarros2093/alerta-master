@@ -98,7 +98,9 @@
         el('button', { onclick: () => api.runtime.sendMessage({ tipo: 'abrir-ficha', id: principal.id }) }, 'Por quê?'),
         el('button', { onclick: () => engano.removeAttribute('hidden') }, 'É engano')
       ),
-      el('span', { class: 'nota' }, 'Investigação não é condenação. Veja as fontes e a versão de cada um em "Por quê?".'),
+      el('span', { class: 'nota' }, principal.situacao === 'registro-indireto'
+        ? 'Aparecer num registro (agenda, voo, doação, evento) não indica irregularidade. Veja qual é o registro em "Por quê?".'
+        : 'Investigação não é condenação. Veja as fontes e a versão de cada um em "Por quê?".'),
       engano
     );
     raiz.append(el('style', {}, ESTILO), aviso);

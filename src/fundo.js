@@ -5,9 +5,9 @@ if (typeof importScripts === 'function' && !globalThis.AlertaMaster) importScrip
 const api = globalThis.browser ?? globalThis.chrome;
 const AM = globalThis.AlertaMaster;
 
-// Link "raw" do data/envolvidos.json no repositório público, quando ele existir.
-// Vazio = usa só a lista que vem dentro da extensão (e a URL que a pessoa configurar nas opções).
-const URL_LISTA_PADRAO = '';
+// Lista pública mais nova; só substitui a embutida se passar na validação e não for mais antiga.
+// A pessoa pode trocar por outra (ex.: um fork) nas opções.
+const URL_LISTA_PADRAO = 'https://raw.githubusercontent.com/brunobarros2093/alerta-master/main/data/envolvidos.json';
 const HORAS_ENTRE_ATUALIZACOES = 12;
 
 async function listaEmbutida() {

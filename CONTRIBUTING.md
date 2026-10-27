@@ -13,15 +13,20 @@ Entra quem tem **pelo menos um** destes, publicado por veículo identificável:
 3. **Decisão pública a favor do Master que está sob investigação** (ex.: aplicação de fundo de previdência
    investigada pela PF).
 
-**Não entra** (sozinho, não basta):
+**Registro indireto** (situação `registro-indireto`, rótulo "Aparece em registros ligados a Vorcaro", só selo por
+padrão). Para quem aparece **apenas** em:
 
 - número na agenda do celular de Vorcaro;
-- estar no mesmo voo ou evento;
-- nome num manuscrito sem prova de pagamento;
-- doação eleitoral declarada à Justiça Eleitoral;
-- voto, projeto de lei ou requerimento;
-- reunião oficial;
-- parentesco.
+- mesmo voo ou evento pago por ele;
+- nome num manuscrito apreendido, sem prova de pagamento;
+- doação eleitoral declarada feita por alguém do grupo;
+- voto, projeto de lei ou requerimento de interesse do Master;
+- encontro com Vorcaro.
+
+Nesses casos o resumo diz **exatamente qual é o registro** e que ele não demonstra irregularidade. Nunca use uma
+situação mais grave do que a fonte sustenta.
+
+**Não entra**: parentesco sozinho e menção sem fonte identificável.
 
 ## Escolha a situação mais grave que **já aconteceu**
 
@@ -34,7 +39,8 @@ Entra quem tem **pelo menos um** destes, publicado por veículo identificável:
 | `delator` | Fechou acordo de colaboração |
 | `liquidada` | Empresa liquidada pelo Banco Central no caso |
 | `patrocinado` | Publicidade, patrocínio ou contrato **declarado** |
-| `citado` | Os demais casos que cumprem as regras de entrada |
+| `citado` | Dinheiro, benefício ou decisão investigada que não se encaixa acima |
+| `registro-indireto` | Só agenda, voo, manuscrito, doação declarada, votação ou encontro |
 
 Se surgir denúncia, condenação, arquivamento ou absolvição, **atualize o resumo e a situação** (ou proponha a
 remoção). Vale sempre o fato mais recente.

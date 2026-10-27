@@ -3,8 +3,8 @@
   const api = globalThis.browser ?? globalThis.chrome;
   const AM = globalThis.AlertaMaster;
 
-  // Endereço do repositório público, quando existir; habilita o botão de relato.
-  const URL_REPOSITORIO = '';
+  // Habilita o botão de relato de engano (abre uma issue já preenchida).
+  const URL_REPOSITORIO = 'https://github.com/brunobarros2093/alerta-master';
   const ROTULO_ACAO = { esconder: 'Esconder', marcar: 'Só marcar', ignorar: 'Ignorar' };
   const ROTULO_ESCOPO = { post: 'só aquele post', site: 'no site', sempre: 'em todo lugar' };
   const ROTULO_TIPO = { pessoa: 'Pessoa', veiculo: 'Veículo de imprensa', empresa: 'Empresa' };

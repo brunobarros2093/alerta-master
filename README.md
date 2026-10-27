@@ -22,7 +22,8 @@ leva às fontes e mostra a versão da pessoa ou empresa.
   a extensão em sites específicos.
 
 Padrão: esconde quem foi preso, é alvo de operação, é investigado ou recebeu pagamento apontado como suspeito;
-só marca delação, empresa liquidada, publicidade/patrocínio declarado e quem foi apenas citado.
+só marca delação, empresa liquidada, publicidade/patrocínio declarado, quem foi apenas citado e quem só aparece em
+registros ligados a Vorcaro (agenda, voo, doação declarada, votação, encontro).
 
 ## Como a lista funciona
 
@@ -33,7 +34,7 @@ Tudo está em [`data/envolvidos.json`](data/envolvidos.json). Cada ficha tem:
 | `nome`, `apelidos` | Nomes que disparam o aviso (sem diferença de acento ou maiúscula) |
 | `redes` | Perfis (@) em X, Instagram, Facebook, TikTok, YouTube e Threads, com `fonte_redes` comprovando |
 | `dominios` | Sites do veículo ou da empresa |
-| `situacao` | O fato mais grave até agora: `foi-preso`, `alvo-de-operacao`, `investigado`, `pagamento-suspeito`, `delator`, `liquidada`, `patrocinado`, `citado` |
+| `situacao` | O fato mais grave até agora: `foi-preso`, `alvo-de-operacao`, `investigado`, `pagamento-suspeito`, `delator`, `liquidada`, `patrocinado`, `citado`, `registro-indireto` (só agenda, voo, doação, votação ou encontro) |
 | `resumo`, `defesa`, `fontes` | O que aconteceu, a versão do citado e onde foi publicado |
 | `exige_contexto` | Nome comum: só dispara se o trecho também falar de Master, Vorcaro, BRB, PF... |
 | `nao_e_quando` | Exceções globais: frases que indicam homônimo (ex.: o jogador de basquete Augusto Lima) |
@@ -41,8 +42,9 @@ Tudo está em [`data/envolvidos.json`](data/envolvidos.json). Cada ficha tem:
 
 Veículos de imprensa casam pelo **domínio e pelos perfis**, não pelo nome escrito no texto.
 
-A extensão já vem com a lista. Opcionalmente, nas opções, ela pode baixar a versão mais nova do repositório
-(endereço `raw.githubusercontent.com`); a lista baixada só é usada se passar na mesma validação dos testes.
+A extensão já vem com a lista e, a cada 12 horas, baixa a versão mais nova deste repositório
+(`raw.githubusercontent.com`). A lista baixada só é usada se passar na mesma validação dos testes e não for mais
+antiga que a embutida. Nas opções dá para apontar para outra lista (um fork, por exemplo).
 
 ## Instalar para testar
 
@@ -74,7 +76,7 @@ Estrutura:
 ## Privacidade
 
 A extensão não coleta nada. Ela lê o texto das páginas **no seu navegador** para procurar os nomes; nada sai da
-sua máquina. A única requisição de rede é baixar a lista do GitHub, e só se você configurar isso.
+sua máquina. A única requisição de rede é baixar a lista deste repositório no GitHub.
 
 ## Contribuir
 

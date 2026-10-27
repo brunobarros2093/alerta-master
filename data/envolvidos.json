@@ -1684,6 +1684,1082 @@
         }
       ],
       "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "arthur-lira",
+      "tipo": "pessoa",
+      "nome": "Arthur Lira",
+      "apelidos": [],
+      "papel": "Senador eleito por Alagoas (PP), ex-presidente da Câmara",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda de Vorcaro, só do lado dele. O nome \"Arthur\" aparece num manuscrito apreendido na casa de Ciro Nogueira, que investigadores avaliam poder se referir a ele; o manuscrito não comprova pagamento.",
+      "defesa": "Nega qualquer relação ou irregularidade envolvendo Vorcaro.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        },
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "dominios": [
+        "arthurlira.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "nikolas-ferreira",
+      "tipo": "pessoa",
+      "nome": "Nikolas Ferreira",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-MG)",
+      "situacao": "registro-indireto",
+      "resumo": "Aparece na agenda de Vorcaro e, em 2022, usou um avião ligado ao banqueiro em compromissos da campanha de Jair Bolsonaro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "redes": {
+        "x": [
+          "nikolas_dm"
+        ],
+        "instagram": [
+          "nikolasferreiradm"
+        ],
+        "facebook": [
+          "nikolasferreiradm"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q109937634",
+      "dominios": [
+        "nikolasferreira.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "tarcisio-de-freitas",
+      "tipo": "pessoa",
+      "nome": "Tarcísio de Freitas",
+      "apelidos": [
+        "Tarcísio Gomes de Freitas"
+      ],
+      "papel": "Governador de São Paulo (Republicanos)",
+      "situacao": "registro-indireto",
+      "resumo": "Fabiano Zettel, cunhado de Vorcaro, doou R$ 2 milhões à campanha dele em 2022. A doação foi declarada à Justiça Eleitoral.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "tarcisiogdf"
+        ],
+        "instagram": [
+          "tarcisiogdf"
+        ],
+        "facebook": [
+          "tarcisiogdf"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q60392579",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "jair-bolsonaro",
+      "tipo": "pessoa",
+      "nome": "Jair Bolsonaro",
+      "apelidos": [
+        "Jair Messias Bolsonaro"
+      ],
+      "papel": "Ex-presidente da República",
+      "situacao": "registro-indireto",
+      "resumo": "Fabiano Zettel, cunhado de Vorcaro, doou R$ 3 milhões à campanha dele em 2022 (doação declarada). O filme Dark Horse, sobre ele, teve a maior parte do orçamento paga por Vorcaro, segundo a produtora.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "redes": {
+        "x": [
+          "jairbolsonaro"
+        ],
+        "instagram": [
+          "jairmessiasbolsonaro"
+        ],
+        "facebook": [
+          "jairmessias.bolsonaro"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10304982",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "rui-costa",
+      "tipo": "pessoa",
+      "nome": "Rui Costa",
+      "apelidos": [],
+      "papel": "Senador eleito pela Bahia (PT), ex-ministro da Casa Civil",
+      "situacao": "registro-indireto",
+      "resumo": "Como governador, assinou em 2018 a privatização da Ebal, que deu origem ao Credcesta (cartão consignado ligado ao Master), e um decreto de 2022 que restringiu a portabilidade dos consignados. O nome dele está numa lista de possíveis presentes de Augusto Lima.",
+      "defesa": "Diz que \"em hipótese nenhuma houve benefício ao Master\" e que o banco não tinha essa estrutura na época da venda.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        },
+        {
+          "veiculo": "DGABC (Estadão Conteúdo)",
+          "titulo": "Lista de presentes de ex-sócio do Master tinha Wagner, Rui Costa, Jerônimo e ACM",
+          "url": "https://www.dgabc.com.br/Noticia/4338466/lista-de-presentes-de-ex-socio-do-master-tinha-wagner-rui-costa-jeronimo-e-acm",
+          "data": "2026-07-31"
+        }
+      ],
+      "exige_contexto": true,
+      "redes": {
+        "x": [
+          "costa_rui"
+        ],
+        "instagram": [
+          "ruicostaoficial"
+        ],
+        "facebook": [
+          "ruicostaoficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10365240",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "jeronimo-rodrigues",
+      "tipo": "pessoa",
+      "nome": "Jerônimo Rodrigues",
+      "apelidos": [],
+      "papel": "Governador da Bahia (PT)",
+      "situacao": "registro-indireto",
+      "resumo": "Manteve a estrutura do Credcesta ao assumir o governo em 2023 e aparece na lista de possíveis presentes de Augusto Lima. A PF não o aponta como investigado.",
+      "defesa": "O governo diz que o Credcesta está sob administração privada desde 2018 e que o contrato estava em análise.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        },
+        {
+          "veiculo": "DGABC (Estadão Conteúdo)",
+          "titulo": "Lista de presentes de ex-sócio do Master tinha Wagner, Rui Costa, Jerônimo e ACM",
+          "url": "https://www.dgabc.com.br/Noticia/4338466/lista-de-presentes-de-ex-socio-do-master-tinha-wagner-rui-costa-jeronimo-e-acm",
+          "data": "2026-07-31"
+        }
+      ],
+      "redes": {
+        "x": [
+          "jeronimoba13"
+        ],
+        "instagram": [
+          "jeronimorodriguesba"
+        ],
+        "facebook": [
+          "jeronimorodriguesba"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q115058424",
+      "dominios": [
+        "jeronimorodrigues.com"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "doutor-luizinho",
+      "tipo": "pessoa",
+      "nome": "Doutor Luizinho",
+      "apelidos": [
+        "Dr. Luizinho"
+      ],
+      "papel": "Deputado federal (PP-RJ)",
+      "situacao": "registro-indireto",
+      "resumo": "Esteve em encontros sociais com Vorcaro em Nova York e Lisboa e tem o número na agenda dele. O nome aparece no manuscrito apreendido na casa de Ciro Nogueira, que não comprova pagamento. Atuou em proposta que ampliava o poder do Congresso sobre o Banco Central.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        },
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "claudio-cajado",
+      "tipo": "pessoa",
+      "nome": "Cláudio Cajado",
+      "apelidos": [],
+      "papel": "Deputado federal (PP-BA)",
+      "situacao": "registro-indireto",
+      "resumo": "Em setembro de 2025 apresentou requerimento de urgência para o projeto que permitiria ao Congresso destituir dirigentes do Banco Central, pouco antes de o BC barrar a compra do Master pelo BRB.",
+      "defesa": "Nega qualquer relação entre essas iniciativas e o caso Master.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        },
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "isnaldo-bulhoes",
+      "tipo": "pessoa",
+      "nome": "Isnaldo Bulhões",
+      "apelidos": [
+        "Isnaldo Bulhões Júnior"
+      ],
+      "papel": "Deputado federal (MDB-AL)",
+      "situacao": "registro-indireto",
+      "resumo": "Viajou em agosto de 2025 no mesmo avião de Vorcaro, de Brasília a São Paulo. O nome está no manuscrito apreendido na casa de Ciro Nogueira, que não comprova pagamento.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "redes": {
+        "instagram": [
+          "isnaldobulhoes"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q58997665",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "marcos-pereira",
+      "tipo": "pessoa",
+      "nome": "Marcos Pereira",
+      "apelidos": [],
+      "papel": "Deputado federal (Republicanos-SP), presidente do partido",
+      "situacao": "registro-indireto",
+      "resumo": "Reportagens o colocam entre os participantes de um encontro em Londres, em abril de 2024, patrocinado pelo Master e pago por Vorcaro.",
+      "defesa": "Nega ter participado e diz que apenas \"passou em frente\" ao local do evento.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "exige_contexto": true,
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "rodrigo-gambale",
+      "tipo": "pessoa",
+      "nome": "Rodrigo Gambale",
+      "apelidos": [],
+      "papel": "Deputado federal (Podemos-SP)",
+      "situacao": "registro-indireto",
+      "resumo": "Estava no mesmo avião de Vorcaro e Ciro Nogueira em 28/08/2025.",
+      "defesa": "Diz que não conhecia Vorcaro e não sabia que ele estava no voo; viajou com outro grupo de passageiros.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "thiago-manzoni",
+      "tipo": "pessoa",
+      "nome": "Thiago Manzoni",
+      "apelidos": [],
+      "papel": "Deputado federal eleito (PL-DF)",
+      "situacao": "registro-indireto",
+      "resumo": "Quando era deputado distrital, votou a favor da autorização para o BRB comprar participação no Master, operação depois vetada pelo Banco Central. Hoje cobra explicações sobre o BRB e pediu uma CPI.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "joao-roma",
+      "tipo": "pessoa",
+      "nome": "João Roma",
+      "apelidos": [],
+      "papel": "Ex-ministro da Cidadania (PL-BA)",
+      "situacao": "registro-indireto",
+      "resumo": "Convocado pela CPI do Crime Organizado para explicar mudanças no crédito consignado do Auxílio Brasil feitas na gestão dele.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        },
+        {
+          "veiculo": "Agência Brasil",
+          "titulo": "Caso Master: CPI do Crime convoca Vorcaro, Campos Neto e Paulo Guedes",
+          "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-02/caso-master-cpi-do-crime-convoca-vorcaro-campos-neto-e-paulo-guedes",
+          "data": "2026-02"
+        }
+      ],
+      "redes": {
+        "instagram": [
+          "joaoromaneto"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q59204311",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "guilherme-derrite",
+      "tipo": "pessoa",
+      "nome": "Guilherme Derrite",
+      "apelidos": [],
+      "papel": "Ex-secretário de Segurança de São Paulo (PP)",
+      "situacao": "registro-indireto",
+      "resumo": "O Estadão o incluiu na rede política do caso pela atuação num projeto que, segundo o governo e parte do Congresso, reduziria os poderes da PF.",
+      "defesa": "Nega que o projeto reduza os poderes da PF.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "fabio-mitidieri",
+      "tipo": "pessoa",
+      "nome": "Fábio Mitidieri",
+      "apelidos": [],
+      "papel": "Governador de Sergipe (PSD)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "filipe-barros",
+      "tipo": "pessoa",
+      "nome": "Filipe Barros",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-PR)",
+      "situacao": "registro-indireto",
+      "resumo": "Autor do PL 4.395/2024, que eleva a cobertura do Fundo Garantidor de Créditos de R$ 250 mil para R$ 1 milhão, medida de interesse do Master, que captava com CDBs garantidos pelo FGC.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "filipebarrost"
+        ],
+        "instagram": [
+          "filipebarrosoficial"
+        ],
+        "facebook": [
+          "filipebarrosoficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q58995581",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "marcelo-alvaro-antonio",
+      "tipo": "pessoa",
+      "nome": "Marcelo Álvaro Antônio",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-MG), ex-ministro do Turismo",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (contato recíproco). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "Marceloalvaroan"
+        ],
+        "instagram": [
+          "marceloalvaroantonio"
+        ],
+        "facebook": [
+          "marceloalvaroantonio"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q48868228",
+      "dominios": [
+        "marceloalvaroantonio.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "paulo-abi-ackel",
+      "tipo": "pessoa",
+      "nome": "Paulo Abi-Ackel",
+      "apelidos": [],
+      "papel": "Deputado federal (PSDB-MG)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (contato recíproco). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "diego-coronel",
+      "tipo": "pessoa",
+      "nome": "Diego Coronel",
+      "apelidos": [],
+      "papel": "Deputado federal (Republicanos-BA)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "exige_contexto": true,
+      "redes": {
+        "instagram": [
+          "diegocoronel.oficial"
+        ],
+        "facebook": [
+          "DiegoCoronel.oficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q59205397",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "aguinaldo-ribeiro",
+      "tipo": "pessoa",
+      "nome": "Aguinaldo Ribeiro",
+      "apelidos": [],
+      "papel": "Deputado federal (PP-PB)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "altineu-cortes",
+      "tipo": "pessoa",
+      "nome": "Altineu Côrtes",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-RJ)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "fausto-pinato",
+      "tipo": "pessoa",
+      "nome": "Fausto Pinato",
+      "apelidos": [],
+      "papel": "Deputado federal (União Brasil-SP)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "faustopinato10"
+        ],
+        "facebook": [
+          "faustopinato"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q19708125",
+      "dominios": [
+        "faustopinato.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "joao-carlos-bacelar",
+      "tipo": "pessoa",
+      "nome": "João Carlos Bacelar",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-BA)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "marcio-marinho",
+      "tipo": "pessoa",
+      "nome": "Márcio Marinho",
+      "apelidos": [],
+      "papel": "Deputado federal (Republicanos-BA)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão (registro só do lado de Vorcaro). Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "davi-alcolumbre",
+      "tipo": "pessoa",
+      "nome": "Davi Alcolumbre",
+      "apelidos": [],
+      "papel": "Presidente do Senado (União Brasil-AP)",
+      "situacao": "registro-indireto",
+      "resumo": "Teve reuniões longas com Vorcaro na época da tentativa de compra do Master pelo BRB e é citado no relatório da PF sobre o celular de Vorcaro, com sigilo retirado em 01/09/2026.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Mendonça retira sigilo de apuração sobre mensagens de Vorcaro e Moraes",
+          "url": "https://www.congressoemfoco.com.br/noticia/121852/mendonca-retira-sigilo-de-apuracao-sobre-mensagens-de-vorcaro-e-moraes",
+          "data": "2026-09-01"
+        },
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "davialcolumbre"
+        ],
+        "instagram": [
+          "davialcolumbre"
+        ],
+        "facebook": [
+          "davi.alcolumbre"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10264359",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "flavia-arruda",
+      "tipo": "pessoa",
+      "nome": "Flávia Arruda",
+      "apelidos": [],
+      "papel": "Ex-ministra da Secretaria de Governo",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão. Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "dominios": [
+        "flaviaarrudadf.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "rodrigo-maia",
+      "tipo": "pessoa",
+      "nome": "Rodrigo Maia",
+      "apelidos": [],
+      "papel": "Ex-presidente da Câmara",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão. Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "redes": {
+        "x": [
+          "RodrigoMaia"
+        ],
+        "instagram": [
+          "rodrigomaiarj"
+        ],
+        "facebook": [
+          "RodrigoMaiaRJ"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10293167",
+      "dominios": [
+        "rodrigomaia.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "lucas-gonzalez",
+      "tipo": "pessoa",
+      "nome": "Lucas Gonzalez",
+      "apelidos": [],
+      "papel": "Político (MG)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão. Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "exige_contexto": true,
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "vinicius-poit",
+      "tipo": "pessoa",
+      "nome": "Vinicius Poit",
+      "apelidos": [],
+      "papel": "Ex-deputado federal (Novo-SP)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão. Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "bilac-pinto",
+      "tipo": "pessoa",
+      "nome": "Bilac Pinto",
+      "apelidos": [],
+      "papel": "Ex-deputado federal (MG)",
+      "situacao": "registro-indireto",
+      "resumo": "Número salvo na agenda do celular comercial de Vorcaro, segundo levantamento do Estadão. Ter o contato salvo não demonstra conversa, favorecimento nem irregularidade.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "lula",
+      "tipo": "pessoa",
+      "nome": "Luiz Inácio Lula da Silva",
+      "apelidos": [
+        "Lula da Silva",
+        "presidente Lula"
+      ],
+      "papel": "Presidente da República",
+      "situacao": "registro-indireto",
+      "resumo": "Recebeu Vorcaro no Palácio do Planalto em 04/12/2024, em encontro com Guido Mantega e Gabriel Galípolo, revelado pelo Metrópoles.",
+      "defesa": "Disse que não haveria posição política \"pró ou contra\" o banco.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "redes": {
+        "x": [
+          "LulaOficial"
+        ],
+        "instagram": [
+          "lulaoficial"
+        ],
+        "facebook": [
+          "lula"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q37181",
+      "dominios": [
+        "lula.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "gabriel-galipolo",
+      "tipo": "pessoa",
+      "nome": "Gabriel Galípolo",
+      "apelidos": [],
+      "papel": "Presidente do Banco Central",
+      "situacao": "registro-indireto",
+      "resumo": "Participou do encontro de Vorcaro com Lula em dezembro de 2024; segundo mensagens, foi procurado por Alexandre de Moraes sobre o caso. Na gestão dele, o BC vetou a compra pelo BRB e liquidou o Master.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "roberto-campos-neto",
+      "tipo": "pessoa",
+      "nome": "Roberto Campos Neto",
+      "apelidos": [],
+      "papel": "Ex-presidente do Banco Central",
+      "situacao": "registro-indireto",
+      "resumo": "Na gestão dele o BC autorizou, em 2019, a transformação do Banco Máxima no Master, pedido negado em 2017. Foi convocado pela CPI do Crime Organizado em fevereiro de 2026.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Agência Brasil",
+          "titulo": "Caso Master: CPI do Crime convoca Vorcaro, Campos Neto e Paulo Guedes",
+          "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-02/caso-master-cpi-do-crime-convoca-vorcaro-campos-neto-e-paulo-guedes",
+          "data": "2026-02"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "andre-mendonca",
+      "tipo": "pessoa",
+      "nome": "André Mendonça",
+      "apelidos": [],
+      "papel": "Ministro do STF, relator do caso desde fevereiro de 2026",
+      "situacao": "registro-indireto",
+      "resumo": "Encontrou Vorcaro em março de 2025 no Instituto Iter, antes de assumir a relatoria; o encontro foi articulado pelo deputado Cezinha de Madureira. Em setembro de 2026 Flávio Dino determinou a apuração do contato.",
+      "defesa": "Diz que no encontro tratou de um processo específico (STP 976).",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "redes": {
+        "x": [
+          "AmendoncaMJSP"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q60396070",
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "paulo-gonet",
+      "tipo": "pessoa",
+      "nome": "Paulo Gonet",
+      "apelidos": [
+        "Paulo Gonet Branco"
+      ],
+      "papel": "Procurador-geral da República",
+      "situacao": "registro-indireto",
+      "resumo": "Esteve no evento de degustação de whisky em Londres (abril de 2024) bancado por Vorcaro. Em 30/10/2025 Vorcaro pediu que alguém o procurasse; o nome aparece no relatório da PF sobre o celular do banqueiro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Mendonça retira sigilo de apuração sobre mensagens de Vorcaro e Moraes",
+          "url": "https://www.congressoemfoco.com.br/noticia/121852/mendonca-retira-sigilo-de-apuracao-sobre-mensagens-de-vorcaro-e-moraes",
+          "data": "2026-09-01"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "andrei-rodrigues",
+      "tipo": "pessoa",
+      "nome": "Andrei Rodrigues",
+      "apelidos": [],
+      "papel": "Diretor-geral da Polícia Federal",
+      "situacao": "registro-indireto",
+      "resumo": "Esteve no evento em Londres (abril de 2024) bancado por Vorcaro. Em 30/10/2025 Vorcaro pediu que alguém o procurasse; o nome aparece no relatório da PF sobre o celular do banqueiro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Mendonça retira sigilo de apuração sobre mensagens de Vorcaro e Moraes",
+          "url": "https://www.congressoemfoco.com.br/noticia/121852/mendonca-retira-sigilo-de-apuracao-sobre-mensagens-de-vorcaro-e-moraes",
+          "data": "2026-09-01"
+        }
+      ],
+      "exige_contexto": true,
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "jose-dirceu",
+      "tipo": "pessoa",
+      "nome": "José Dirceu",
+      "apelidos": [],
+      "papel": "Ex-ministro da Casa Civil, ex-presidente do PT",
+      "situacao": "registro-indireto",
+      "resumo": "Contato salvo no celular de Vorcaro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "fabio-faria",
+      "tipo": "pessoa",
+      "nome": "Fábio Faria",
+      "apelidos": [],
+      "papel": "Ex-ministro das Comunicações",
+      "situacao": "registro-indireto",
+      "resumo": "O relatório da PF sobre o celular de Vorcaro, com sigilo retirado em 01/09/2026, cita conversas dele com o banqueiro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Mendonça retira sigilo de apuração sobre mensagens de Vorcaro e Moraes",
+          "url": "https://www.congressoemfoco.com.br/noticia/121852/mendonca-retira-sigilo-de-apuracao-sobre-mensagens-de-vorcaro-e-moraes",
+          "data": "2026-09-01"
+        }
+      ],
+      "exige_contexto": true,
+      "redes": {
+        "x": [
+          "fabiofaria5555"
+        ],
+        "instagram": [
+          "fabiofaria.5555"
+        ],
+        "facebook": [
+          "fabiofaria5555"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10279146",
+      "dominios": [
+        "fabiofaria.com.br"
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "cezinha-de-madureira",
+      "tipo": "pessoa",
+      "nome": "Cezinha de Madureira",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-SP)",
+      "situacao": "registro-indireto",
+      "resumo": "Articulou o encontro do ministro André Mendonça com Vorcaro em março de 2025.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "nunes-marques",
+      "tipo": "pessoa",
+      "nome": "Kassio Nunes Marques",
+      "apelidos": [
+        "Nunes Marques"
+      ],
+      "papel": "Ministro do STF",
+      "situacao": "registro-indireto",
+      "resumo": "Senadores pediram a suspeição dele no caso por suposta relação com Ciro Nogueira (07/05/2026). O filho dele recebeu R$ 281.630 da Consult Inteligência, que recebeu R$ 6,6 milhões do Master; mensagens de Vorcaro citam pagamento de R$ 500 mil ao filho.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Bahia Notícias",
+          "titulo": "Mensagens de Vorcaro citam pagamento de R$ 500 mil a filho de Kassio Nunes Marques",
+          "url": "https://www.bahianoticias.com.br/noticia/321165-mensagens-de-vorcaro-citam-pagamento-de-r-500-mil-a-filho-de-kassio-nunes-marques"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "fabio-wajngarten",
+      "tipo": "pessoa",
+      "nome": "Fabio Wajngarten",
+      "apelidos": [],
+      "papel": "Advogado, ex-secretário de Comunicação",
+      "situacao": "citado",
+      "resumo": "Recebeu R$ 3,8 milhões do Master por consultoria, segundo dados enviados à CPI.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "redes": {
+        "x": [
+          "fabiowoficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q87576674",
+      "verificado_em": "2026-10-27"
     }
   ]
 }
