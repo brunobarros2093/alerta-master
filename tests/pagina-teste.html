@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página de teste do Alerta Master</title>
+  <!--
+    Teste manual do script de conteúdo sem instalar a extensão.
+    Sirva a raiz do projeto (ex.: python -m http.server 8765) e abra /tests/pagina-teste.html.
+    A API do navegador é simulada abaixo; os enganos ficam no localStorage desta página.
+  -->
+  <link rel="stylesheet" href="../src/conteudo.css">
+  <style>
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; background: #fafafa; color: #111; }
+    article, .g { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 12px 14px; margin: 12px 0; }
+    .autor { font-weight: 600; }
+    small { color: #666; }
+  </style>
+  <script>
+    (function () {
+      const chave = 'am_enganos';
+      const ouvintes = [];
+      const lerEnganos = () => JSON.parse(localStorage.getItem(chave) || '[]');
+      globalThis.chrome = {
+        runtime: {
+          async sendMessage(msg) {
+            console.log('[AlertaMaster]', JSON.stringify(msg));
+            if (msg.tipo === 'estado') {
+              const lista = await (await fetch('../data/envolvidos.json')).json();
+              return { lista, enganos: lerEnganos(), config: AlertaMaster.mesclarConfig() };
+            }
+            if (msg.tipo === 'engano') {
+              const enganos = lerEnganos().concat(msg.registros);
+              localStorage.setItem(chave, JSON.stringify(enganos));
+              for (const f of ouvintes) f({ enganos: { newValue: enganos } }, 'local');
+              return { total: enganos.length };
+            }
+            return undefined;
+          }
+        },
+        storage: { onChanged: { addListener: (f) => ouvintes.push(f) } }
+      };
+    })();
+  </script>
+</head>
+<body>
+  <h1>Feed de teste</h1>
+  <p><small>Recarregue com <code>localStorage.clear()</code> no console para apagar os "é engano".</small></p>
+
+  <article>
+    <div class="autor">Portal Exemplo</div>
+    <p>Defesa de Daniel Vorcaro pede ao STF a revogação da prisão preventiva.</p>
+  </article>
+
+  <article>
+    <div class="autor"><a href="https://x.com/HugoMottaPB">Hugo Motta</a> <small>@HugoMottaPB</small></div>
+    <p>Hoje votamos a pauta econômica na Câmara.</p>
+  </article>
+
+  <article>
+    <div class="autor">Esportes</div>
+    <p>Augusto Lima faz 20 pontos e o Flamengo vence no basquete.</p>
+  </article>
+
+  <article>
+    <div class="autor">Política</div>
+    <p>Segundo o Estadão, a votação fica para a próxima semana.</p>
+  </article>
+
+  <div class="MjjYud">
+    <div class="g">
+      <a href="https://www.metropoles.com/brasil/alguma-noticia">Notícia qualquer — Metrópoles</a>
+      <p>Trecho de resultado de busca com link para um portal da lista.</p>
+    </div>
+  </div>
+
+  <article>
+    <div class="autor">Notícia sem relação</div>
+    <p>Previsão do tempo: chuva forte no fim de semana em São Paulo.</p>
+  </article>
+
+  <script src="../src/nucleo.js"></script>
+  <script src="../src/conteudo.js"></script>
+</body>
+</html>

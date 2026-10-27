@@ -1,0 +1,1689 @@
+{
+  "caso": "Banco Master",
+  "atualizado_em": "2026-10-27",
+  "aviso": "Investigação não é condenação. Até a data acima ninguém foi condenado no caso Master. Cada ficha diz o que aconteceu com a pessoa, veículo ou empresa e traz a versão dela. Publicidade e patrocínio declarados não são crime: aparecem separados para quem lê decidir.",
+  "envolvidos": [
+    {
+      "id": "daniel-vorcaro",
+      "tipo": "pessoa",
+      "nome": "Daniel Vorcaro",
+      "apelidos": [
+        "Daniel Bueno Vorcaro"
+      ],
+      "papel": "Ex-controlador do Banco Master",
+      "situacao": "foi-preso",
+      "resumo": "Preso em novembro de 2025 na 1ª fase da Operação Compliance Zero (PF) e de novo em 04/03/2026. Investigado por gestão fraudulenta, organização criminosa, corrupção e lavagem de dinheiro. O Banco Central liquidou o Master em 18/11/2025 e o STF bloqueou mais de R$ 5,7 bilhões.",
+      "defesa": "Nega as acusações; a defesa diz que as investigações se fundam em fato inexistente.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Jornal Grande Bahia",
+          "titulo": "Operação Compliance Zero chega a dez fases",
+          "url": "https://jornalgrandebahia.com.br/2026/09/caso-banco-master-operacao-compliance-zero-chega-a-dez-fases-amplia-investigacao-sobre-daniel-vorcaro-e-provoca-novos-desdobramentos-no-stf-pf-e-pgr/",
+          "data": "2026-09"
+        },
+        {
+          "veiculo": "Reuters via MarketScreener",
+          "titulo": "Brazil central bank shuts Banco Master as police arrest top shareholder",
+          "url": "https://uk.marketscreener.com/news/brazil-central-bank-shuts-banco-master-as-police-arrest-top-shareholder-ce7d5edbda8cfe25",
+          "data": "2025-11-18"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "instagram": [
+          "danielvorcaro"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q133259974"
+    },
+    {
+      "id": "henrique-vorcaro",
+      "tipo": "pessoa",
+      "nome": "Henrique Vorcaro",
+      "apelidos": [],
+      "papel": "Pai de Daniel Vorcaro",
+      "situacao": "foi-preso",
+      "resumo": "Preso em 14/05/2026 na 6ª fase da Compliance Zero, que apura intimidação, coação e obtenção indevida de informações sigilosas. Em outubro de 2026 a PGR defendeu no STF a manutenção da prisão.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "O Tempo",
+          "titulo": "PGR defende manutenção da prisão de parentes de Daniel Vorcaro",
+          "url": "https://www.otempo.com.br/politica/judiciario/2026/10/20/pgr-defende-manutencao-da-prisao-de-parentes-de-daniel-vorcaro-e-de-investigados-no-caso-master",
+          "data": "2026-10-20"
+        },
+        {
+          "veiculo": "Jornal Grande Bahia",
+          "titulo": "Operação Compliance Zero chega a dez fases",
+          "url": "https://jornalgrandebahia.com.br/2026/09/caso-banco-master-operacao-compliance-zero-chega-a-dez-fases-amplia-investigacao-sobre-daniel-vorcaro-e-provoca-novos-desdobramentos-no-stf-pf-e-pgr/",
+          "data": "2026-09"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "felipe-cancado-vorcaro",
+      "tipo": "pessoa",
+      "nome": "Felipe Cançado Vorcaro",
+      "apelidos": [
+        "Felipe Vorcaro"
+      ],
+      "papel": "Primo de Daniel Vorcaro",
+      "situacao": "foi-preso",
+      "resumo": "Preso em 07/05/2026, apontado pela PF como peça central do núcleo financeiro-operacional do grupo. Em outubro de 2026 a PGR defendeu no STF a manutenção da prisão.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "O Tempo",
+          "titulo": "PGR defende manutenção da prisão de parentes de Daniel Vorcaro",
+          "url": "https://www.otempo.com.br/politica/judiciario/2026/10/20/pgr-defende-manutencao-da-prisao-de-parentes-de-daniel-vorcaro-e-de-investigados-no-caso-master",
+          "data": "2026-10-20"
+        },
+        {
+          "veiculo": "Diário do Nordeste",
+          "titulo": "PF cumpre mandado na casa de Ciro Nogueira em operação do caso Master",
+          "url": "https://diariodonordeste.verdesmares.com.br/pontopoder/pf-cumpre-mandado-na-casa-de-ciro-nogueira-em-operacao-do-caso-master-1.3762259",
+          "data": "2026-05-07"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "fabiano-zettel",
+      "tipo": "pessoa",
+      "nome": "Fabiano Zettel",
+      "apelidos": [
+        "Fabiano Campos Zettel"
+      ],
+      "papel": "Cunhado de Daniel Vorcaro",
+      "situacao": "foi-preso",
+      "resumo": "Preso em 04/03/2026 na fase da Compliance Zero sobre ameaças, corrupção e lavagem. Segundo o Metrópoles, aplicou R$ 48,5 milhões numa empresa apontada como intermediária de pagamentos. Em outubro de 2026 a PGR defendeu a manutenção da prisão.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "O Tempo",
+          "titulo": "PGR defende manutenção da prisão de parentes de Daniel Vorcaro",
+          "url": "https://www.otempo.com.br/politica/judiciario/2026/10/20/pgr-defende-manutencao-da-prisao-de-parentes-de-daniel-vorcaro-e-de-investigados-no-caso-master",
+          "data": "2026-10-20"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "daniel-lopes-monteiro",
+      "tipo": "pessoa",
+      "nome": "Daniel Lopes Monteiro",
+      "apelidos": [],
+      "papel": "Advogado",
+      "situacao": "foi-preso",
+      "resumo": "Preso preventivamente em 16/04/2026 na 4ª fase da Compliance Zero, junto com o ex-presidente do BRB, na apuração de vantagens indevidas para viabilizar a compra do Master pelo BRB. Em outubro de 2026 a PGR defendeu a manutenção da prisão.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "O Tempo",
+          "titulo": "PGR defende manutenção da prisão de parentes de Daniel Vorcaro",
+          "url": "https://www.otempo.com.br/politica/judiciario/2026/10/20/pgr-defende-manutencao-da-prisao-de-parentes-de-daniel-vorcaro-e-de-investigados-no-caso-master",
+          "data": "2026-10-20"
+        },
+        {
+          "veiculo": "Jornal Grande Bahia",
+          "titulo": "Operação Compliance Zero chega a dez fases",
+          "url": "https://jornalgrandebahia.com.br/2026/09/caso-banco-master-operacao-compliance-zero-chega-a-dez-fases-amplia-investigacao-sobre-daniel-vorcaro-e-provoca-novos-desdobramentos-no-stf-pf-e-pgr/",
+          "data": "2026-09"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "paulo-henrique-costa",
+      "tipo": "pessoa",
+      "nome": "Paulo Henrique Costa",
+      "apelidos": [],
+      "papel": "Ex-presidente do BRB (Banco de Brasília)",
+      "situacao": "foi-preso",
+      "exige_contexto": true,
+      "resumo": "Afastado do BRB em novembro de 2025 e preso em 16/04/2026 na 4ª fase da Compliance Zero. A PF apura corrupção e lavagem ligadas à tentativa de compra do Master pelo BRB, com R$ 146,5 milhões em vantagens negociadas. Manifestou interesse em colaborar com a Justiça.",
+      "defesa": "O advogado Cleber Lopes disse que o mandado tem natureza processual, não de responsabilidade penal; Costa nega ter recebido vantagens.",
+      "fontes": [
+        {
+          "veiculo": "Poder360",
+          "titulo": "Ex-presidente do BRB é preso na operação Compliance Zero",
+          "url": "https://www.poder360.com.br/poder-justica/ex-presidente-do-brb-e-preso-na-operacao-compliance-zero/",
+          "data": "2026-04-16"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Quem é Paulo Henrique Costa, ex-presidente do BRB preso em operação da PF",
+          "url": "https://www.cnnbrasil.com.br/politica/quem-e-paulo-henrique-costa-ex-presidente-do-brb-preso-em-operacao-da-pf/",
+          "data": "2026-04-16"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "luiz-antonio-bull",
+      "tipo": "pessoa",
+      "nome": "Luiz Antonio Bull",
+      "apelidos": [],
+      "papel": "Ex-diretor de Riscos do Banco Master",
+      "situacao": "foi-preso",
+      "resumo": "Preso em novembro de 2025 na 1ª fase da Operação Compliance Zero, junto com Daniel Vorcaro.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "augusto-lima",
+      "tipo": "pessoa",
+      "nome": "Augusto Ferreira Lima",
+      "apelidos": [
+        "Augusto Lima",
+        "Guga Lima"
+      ],
+      "papel": "Ex-CEO e ex-sócio do Banco Master",
+      "situacao": "foi-preso",
+      "exige_contexto": true,
+      "resumo": "Preso em novembro de 2025 na 1ª fase da Compliance Zero e solto no mesmo mês com tornozeleira. Alvo de busca na 9ª fase (18/06/2026), que apura corrupção e lavagem; a PF registrou 74 ligações dele com o senador Jaques Wagner e diz que articulou a venda de carteiras do Master ao BRB.",
+      "defesa": "Os advogados dizem que ele sempre atuou dentro dos limites da lei.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Quem é Augusto Lima, ex-sócio de Vorcaro e alvo de operação da PF",
+          "url": "https://www.cnnbrasil.com.br/politica/quem-e-augusto-lima-ex-socio-de-vorcaro-e-alvo-de-operacao-da-pf/",
+          "data": "2026-06"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Entenda em 5 pontos a operação da PF contra Jaques Wagner",
+          "url": "https://www.cnnbrasil.com.br/politica/entenda-em-5-pontos-a-operacao-da-pf-contra-jaques-wagner/",
+          "data": "2026-06"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "nao_e_quando": [
+        "augustolima7",
+        "basquete",
+        "nbb"
+      ]
+    },
+    {
+      "id": "marilson-roseno-da-silva",
+      "tipo": "pessoa",
+      "nome": "Marilson Roseno da Silva",
+      "apelidos": [],
+      "papel": "Apontado pela PF como integrante do grupo \"A Turma\"",
+      "situacao": "foi-preso",
+      "resumo": "Preso em 04/03/2026 na fase da Compliance Zero que apura intimidação e coação contra adversários de Vorcaro e interferência nas investigações.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "victor-lima-sedlmaier",
+      "tipo": "pessoa",
+      "nome": "Victor Lima Sedlmaier",
+      "apelidos": [],
+      "papel": "Apontado pela PF como ligado ao grupo \"A Turma\"",
+      "situacao": "foi-preso",
+      "resumo": "Preso em Dubai em 16/05/2026, no desdobramento da 6ª fase da Compliance Zero (intimidação, coação e invasão de dispositivos).",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Jornal Grande Bahia",
+          "titulo": "Operação Compliance Zero chega a dez fases",
+          "url": "https://jornalgrandebahia.com.br/2026/09/caso-banco-master-operacao-compliance-zero-chega-a-dez-fases-amplia-investigacao-sobre-daniel-vorcaro-e-provoca-novos-desdobramentos-no-stf-pf-e-pgr/",
+          "data": "2026-09"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "deivis-marcon-antunes",
+      "tipo": "pessoa",
+      "nome": "Deivis Marcon Antunes",
+      "apelidos": [],
+      "papel": "Ex-presidente do Rioprevidência",
+      "situacao": "foi-preso",
+      "resumo": "Preso em 03/02/2026 na 2ª fase da Operação Barco de Papel, que apura as aplicações do Rioprevidência em títulos do Banco Master.",
+      "defesa": "Nega todas as acusações.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "ciro-nogueira",
+      "tipo": "pessoa",
+      "nome": "Ciro Nogueira",
+      "apelidos": [
+        "Ciro Nogueira Lima Filho"
+      ],
+      "papel": "Senador (PP-PI) e presidente nacional do PP",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo de busca e apreensão em 07/05/2026 na 5ª fase da Compliance Zero. A decisão do ministro André Mendonça o indica como \"destinatário central das vantagens indevidas\" de Vorcaro; a PF cita uma mesada de R$ 300 mil e uma emenda dele para ampliar a cobertura do FGC. Bloqueio de R$ 18,85 milhões.",
+      "defesa": "Disse que a ação é uma \"tentativa de manchar a minha honra pessoal\" e nega irregularidades.",
+      "fontes": [
+        {
+          "veiculo": "Diário do Nordeste",
+          "titulo": "PF cumpre mandado na casa de Ciro Nogueira em operação do caso Master",
+          "url": "https://diariodonordeste.verdesmares.com.br/pontopoder/pf-cumpre-mandado-na-casa-de-ciro-nogueira-em-operacao-do-caso-master-1.3762259",
+          "data": "2026-05-07"
+        },
+        {
+          "veiculo": "Jovem Pan",
+          "titulo": "\"Tentativa de manchar a minha honra pessoal\", diz Ciro Nogueira após ser alvo da PF",
+          "url": "https://jovempan.com.br/noticias/politica/tentativa-de-manchar-a-minha-honra-pessoal-diz-ciro-nogueira-apos-ser-alvo-da-pf.html",
+          "data": "2026-05-07"
+        },
+        {
+          "veiculo": "Money Times",
+          "titulo": "Senador Ciro Nogueira é alvo de busca da PF no caso Master",
+          "url": "https://www.moneytimes.com.br/senador-ciro-nogueira-e-alvo-de-busca-da-pf-no-caso-master-jcav/",
+          "data": "2026-05-07"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "instagram": [
+          "cironogueira"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q15985219"
+    },
+    {
+      "id": "jaques-wagner",
+      "tipo": "pessoa",
+      "nome": "Jaques Wagner",
+      "apelidos": [],
+      "papel": "Senador (PT-BA), ex-líder do governo no Senado",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo de busca e apreensão em 18/06/2026 na 9ª fase da Compliance Zero, que apura corrupção e lavagem. A PF suspeita que um apartamento de cerca de R$ 2,45 milhões em Salvador seria vantagem indevida ligada à atuação a favor do Master. Deixou a liderança do governo em 24/06/2026.",
+      "defesa": "Nega irregularidades e contato com Vorcaro; diz que o dinheiro apreendido é de diárias e que o apartamento nunca foi seu.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Entenda em 5 pontos a operação da PF contra Jaques Wagner",
+          "url": "https://www.cnnbrasil.com.br/politica/entenda-em-5-pontos-a-operacao-da-pf-contra-jaques-wagner/",
+          "data": "2026-06"
+        },
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "Veja imagens de apartamento atribuído a Jaques Wagner no caso Master",
+          "url": "https://www.metropoles.com/brasil/veja-imagens-de-apartamento-atribuido-a-jaques-wagner-no-caso-master",
+          "data": "2026-06"
+        },
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "jaqueswagner"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q6159407"
+    },
+    {
+      "id": "claudio-castro",
+      "tipo": "pessoa",
+      "nome": "Cláudio Castro",
+      "apelidos": [
+        "Claudio Bomfim de Castro e Silva"
+      ],
+      "papel": "Ex-governador do Rio de Janeiro (PL)",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo de busca e apreensão em 26/05/2026 na 8ª fase da Compliance Zero, que apura a aplicação de cerca de R$ 3 bilhões do Rioprevidência em títulos e fundos do Master. A decisão do STF registra que ele teria tido papel politicamente relevante para viabilizar os aportes. Desistiu da candidatura ao Senado.",
+      "defesa": "Nega irregularidades; o advogado disse que ele acompanhou as buscas com serenidade.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "Castro é alvo da PF por aplicar R$ 3 bi do Rioprevidência no Master",
+          "url": "https://www.gazetadopovo.com.br/republica/castro-alvo-pf-aplicar-3-bi-riopreviencia-master/",
+          "data": "2026-05-26"
+        },
+        {
+          "veiculo": "Itatiaia",
+          "titulo": "PF faz operação contra Cláudio Castro por fundos ligados ao Banco Master",
+          "url": "https://www.itatiaia.com.br/brasil/sudeste/rj/pf-faz-operacao-contra-claudio-castro-por-fundos-ligados-ao-banco-master",
+          "data": "2026-05-26"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "claudiocastroRJ"
+        ],
+        "instagram": [
+          "claudiocastrorj"
+        ],
+        "facebook": [
+          "ClaudioCastroRJ"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q57965921",
+      "dominios": [
+        "claudiocastro.net"
+      ]
+    },
+    {
+      "id": "nelson-tanure",
+      "tipo": "pessoa",
+      "nome": "Nelson Tanure",
+      "apelidos": [
+        "Nelson Sequeiros Tanure"
+      ],
+      "papel": "Empresário e investidor",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo da 2ª fase da Compliance Zero (14/01/2026). A PF suspeita que seja \"sócio oculto\" do Master e diz que ele tirou cerca de R$ 350 milhões do caixa da Ligga Telecom para aplicar em papéis sem liquidez, incluindo títulos do banco.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Folha (via Harvard TagTeam)",
+          "titulo": "PF faz operação em endereços de Vorcaro e STF determina bloqueio de R$ 5,7 bilhões",
+          "url": "https://tagteam.harvard.edu/hub_feeds/3884/feed_items/17183860/content",
+          "data": "2026-01-14"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "mario-frias",
+      "tipo": "pessoa",
+      "nome": "Mario Frias",
+      "apelidos": [],
+      "papel": "Deputado federal (PL-SP), produtor-executivo do filme Dark Horse",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo da Operação Make Up (PF, 10/09/2026), que apura desvio de emendas: ele destinou cerca de R$ 2 milhões a uma ONG ligada à produtora de Dark Horse, filme que Vorcaro financiou em grande parte. O Intercept divulgou áudio dele agradecendo a Vorcaro.",
+      "defesa": "Nega ter recebido \"um único centavo\"; diz que só indicou as emendas e chamou a operação de \"cortina de fumaça\".",
+      "fontes": [
+        {
+          "veiculo": "Diário de Pernambuco",
+          "titulo": "PF cumpre mandado de busca e apreensão contra Mario Frias em investigação sobre emendas do filme Dark Horse",
+          "url": "https://www.diariodepernambuco.com.br/politica/2026/09/11723536-pf-cumpre-mandado-de-busca-e-apreensao-contra-mario-frias-em-investigacao-sobre-emendas-do-filme-dark-horse.html",
+          "data": "2026-09-10"
+        },
+        {
+          "veiculo": "Jornal Opção",
+          "titulo": "PF mira produtora de filme sobre Bolsonaro e deputado Mario Frias em operação sobre emendas",
+          "url": "https://www.jornalopcao.com.br/policia/pf-mira-produtora-de-filme-sobre-bolsonaro-e-deputado-mario-frias-em-operacao-sobre-emendas-866555/",
+          "data": "2026-09-10"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "mfriasoficial"
+        ],
+        "instagram": [
+          "mariofriasoficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q6949721"
+    },
+    {
+      "id": "thiago-miranda",
+      "tipo": "pessoa",
+      "nome": "Thiago Miranda",
+      "apelidos": [],
+      "papel": "Publicitário e empresário",
+      "situacao": "alvo-de-operacao",
+      "exige_contexto": true,
+      "resumo": "Alvo da 10ª fase da Compliance Zero (09/07/2026), que apura atuação coordenada nas redes contra o Banco Central e intimidação de jornalistas e servidores. Intermediou contatos entre Flávio Bolsonaro, Mario Frias e Vorcaro sobre o filme Dark Horse.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Jornal Grande Bahia",
+          "titulo": "Operação Compliance Zero chega a dez fases",
+          "url": "https://jornalgrandebahia.com.br/2026/09/caso-banco-master-operacao-compliance-zero-chega-a-dez-fases-amplia-investigacao-sobre-daniel-vorcaro-e-provoca-novos-desdobramentos-no-stf-pf-e-pgr/",
+          "data": "2026-09"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "rafael-de-gois",
+      "tipo": "pessoa",
+      "nome": "Rafael de Gois",
+      "apelidos": [
+        "Rafael de Góis"
+      ],
+      "papel": "Fundador e CEO do Grupo Fictor",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Alvo da Operação Fallax (PF, 25/03/2026), sobre empresas de fachada e operações simuladas. O Grupo Fictor anunciou a compra do Master um dia antes da liquidação do banco.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "eduardo-bolsonaro",
+      "tipo": "pessoa",
+      "nome": "Eduardo Bolsonaro",
+      "apelidos": [],
+      "papel": "Ex-deputado federal (PL-SP)",
+      "situacao": "investigado",
+      "resumo": "A PF investiga se dinheiro de Vorcaro enviado ao fundo Havengate, nos EUA, custeou a permanência dele no país. Relatório da PF citado pela imprensa diz que ele orientou o envio dos recursos ao fundo, ligado ao filme Dark Horse.",
+      "defesa": "Nega irregularidades; diz que recebeu apenas direitos de imagem e reembolso.",
+      "fontes": [
+        {
+          "veiculo": "BBC Brasil (via O Povo)",
+          "titulo": "Havengate: o fundo na mira da PF que conecta Vorcaro, Flávio e Eduardo Bolsonaro",
+          "url": "https://www.opovo.com.br/agencia/bbc/2026/05/16/havengate-o-fundo-na-mira-da-pf-que-conecta-vorcaro-flavio-e-eduardo-bolsonaro.html",
+          "data": "2026-05-16"
+        },
+        {
+          "veiculo": "Gazeta SP",
+          "titulo": "Eduardo Bolsonaro orientou repasses do Banco Master de Vorcaro para fundo nos EUA",
+          "url": "https://www.gazetasp.com.br/politica/eduardo-bolsonaro-orientou-repasses-do-banco-master-de-vorcaro-para-fundo-nos-eua-buscando-financiar-dark-horse-filme-sobre-jair-bolsonaro/"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "BolsonaroSP"
+        ],
+        "instagram": [
+          "bolsonarosp"
+        ],
+        "facebook": [
+          "bolsonaro.enb"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q18246320",
+      "dominios": [
+        "eduardobolsonarosp.com.br"
+      ]
+    },
+    {
+      "id": "antonio-carlos-freixo-junior",
+      "tipo": "pessoa",
+      "nome": "Antônio Carlos Freixo Júnior",
+      "apelidos": [
+        "Antonio Carlos Freixo"
+      ],
+      "papel": "Operador do mercado financeiro, conhecido como \"Mineiro\"",
+      "situacao": "investigado",
+      "resumo": "Investigado na Compliance Zero. Ligado à Entre Investimentos, por onde parte do dinheiro de Vorcaro teria seguido ao fundo Havengate. Segundo a Wikipédia, fechou acordo de colaboração com a PGR em setembro de 2026.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "BBC Brasil (via O Povo)",
+          "titulo": "Havengate: o fundo na mira da PF que conecta Vorcaro, Flávio e Eduardo Bolsonaro",
+          "url": "https://www.opovo.com.br/agencia/bbc/2026/05/16/havengate-o-fundo-na-mira-da-pf-que-conecta-vorcaro-flavio-e-eduardo-bolsonaro.html",
+          "data": "2026-05-16"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "flavio-bolsonaro",
+      "tipo": "pessoa",
+      "nome": "Flávio Bolsonaro",
+      "apelidos": [],
+      "papel": "Senador (PL-RJ) e candidato à Presidência em 2026",
+      "situacao": "citado",
+      "resumo": "Áudio divulgado pelo Intercept em 13/05/2026 mostra o senador pedindo a Vorcaro dinheiro para o filme Dark Horse (a imprensa fala em R$ 134 milhões negociados). Ele confirmou o pedido. A PF apura se parte do dinheiro, via fundo Havengate, custeou Eduardo Bolsonaro nos EUA.",
+      "defesa": "Admite ter pedido apoio ao filme, nega vantagem indevida e diz que omitiu a relação por contrato de confidencialidade.",
+      "fontes": [
+        {
+          "veiculo": "Agência Pública",
+          "titulo": "Flávio Bolsonaro: áudio vazado com Vorcaro cobra R$ 134 milhões",
+          "url": "https://apublica.org/nota/flavio-bolsonaro-audio-vazado-com-vorcaro-cobra-r-134-milhoes/",
+          "data": "2026-05"
+        },
+        {
+          "veiculo": "Band",
+          "titulo": "Flávio Bolsonaro nega troca de favores com Vorcaro após vazamento de áudio",
+          "url": "https://www.band.com.br/politica/noticias/flavio-bolsonaro-nega-troca-de-favores-com-vorcaro-apos-vazamento-de-audio-202605131900",
+          "data": "2026-05-13"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "instagram": [
+          "flaviobolsonaro"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10283057",
+      "dominios": [
+        "flaviobolsonaro.net"
+      ]
+    },
+    {
+      "id": "hugo-motta",
+      "tipo": "pessoa",
+      "nome": "Hugo Motta",
+      "apelidos": [
+        "Hugo Motta Wanderley da Nóbrega"
+      ],
+      "papel": "Deputado federal (Republicanos-PB) e presidente da Câmara",
+      "situacao": "citado",
+      "resumo": "Mensagens do celular de Vorcaro analisadas pela PF indicam que ele pediu ao banqueiro a liberação de um empréstimo de pelo menos R$ 22 milhões do Master para empresa da cunhada. Admitiu ter viajado a Portugal às custas de Vorcaro.",
+      "defesa": "Nega favorecimento; diz que os diálogos foram descontextualizados e que o contrato é anterior às investigações.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Hugo pediu a Vorcaro empréstimo do Master à empresa de cunhada, diz jornal",
+          "url": "https://www.cnnbrasil.com.br/politica/hugo-pediu-a-vorcaro-emprestimo-do-master-a-empresa-de-cunhada-diz-jornal/"
+        },
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "Motta pediu a Vorcaro que Master liberasse empréstimo a empresa de cunhada",
+          "url": "https://www.metropoles.com/brasil/motta-pediu-a-vorcaro-que-master-liberasse-emprestimo-a-empresa-de-cunhada"
+        },
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "HugoMottaPB"
+        ],
+        "instagram": [
+          "hugomottapb"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10298778"
+    },
+    {
+      "id": "antonio-rueda",
+      "tipo": "pessoa",
+      "nome": "Antonio Rueda",
+      "apelidos": [
+        "Antônio de Rueda"
+      ],
+      "papel": "Presidente nacional do União Brasil, deputado federal eleito (RJ)",
+      "situacao": "citado",
+      "resumo": "Dados da Receita Federal enviados à CPI mostram R$ 6,4 milhões do Master a dois escritórios ligados a ele desde 2023. Foi citado como interlocutor na venda ao BRB e numa proposta de delação de Vorcaro que não foi homologada.",
+      "defesa": "Diz que os pagamentos foram por serviços jurídicos prestados e nega as acusações da proposta de delação.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "acm-neto",
+      "tipo": "pessoa",
+      "nome": "ACM Neto",
+      "apelidos": [
+        "Antônio Carlos Magalhães Neto"
+      ],
+      "papel": "Ex-prefeito de Salvador (União Brasil)",
+      "situacao": "citado",
+      "resumo": "Empresa de consultoria ligada a ele recebeu pagamentos do Master e da gestora Reag (R$ 5,4 milhões segundo o Estadão; R$ 3,6 milhões segundo O Globo). O Coaf apontou movimentação acima da capacidade declarada.",
+      "defesa": "Diz que os valores se referem a serviços prestados legalmente e nega irregularidades.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "acmneto_"
+        ],
+        "instagram": [
+          "acmnetooficial"
+        ],
+        "facebook": [
+          "ACMNetoOficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q9621234"
+    },
+    {
+      "id": "michel-temer",
+      "tipo": "pessoa",
+      "nome": "Michel Temer",
+      "apelidos": [
+        "Michel Miguel Elias Temer Lulia"
+      ],
+      "papel": "Ex-presidente da República",
+      "situacao": "citado",
+      "resumo": "Dados da Receita enviados à CPI mostram R$ 10 milhões do Master ao escritório dele em 2025.",
+      "defesa": "Diz que o escritório foi contratado para mediação jurídica e que recebeu R$ 7,5 milhões, não R$ 10 milhões.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Itatiaia",
+          "titulo": "Master declarou pagamentos a Temer, Rueda e outros políticos",
+          "url": "https://www.itatiaia.com.br/politica/master-declarou-pagamentos-a-temer-rueda-e-outros-politicos/"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "MichelTemer"
+        ],
+        "instagram": [
+          "micheltemer"
+        ],
+        "facebook": [
+          "MichelTemer"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q463533"
+    },
+    {
+      "id": "guido-mantega",
+      "tipo": "pessoa",
+      "nome": "Guido Mantega",
+      "apelidos": [],
+      "papel": "Ex-ministro da Fazenda",
+      "situacao": "citado",
+      "resumo": "A Pollaris Consultoria, empresa dele, recebeu R$ 14 milhões do Master, segundo dados da Receita enviados à CPI. Participou do encontro de Vorcaro com o presidente Lula em dezembro de 2024.",
+      "defesa": "Diz que prestou consultoria e que não sabia de irregularidades no banco.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Diário do Poder",
+          "titulo": "Lewandowski, líder de Lula, Mantega etc.: veja lista do Master",
+          "url": "https://diariodopoder.com.br/brasil-e-regioes/lewandowski-lider-de-lula-mantega-etc-veja-lista-do-master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "henrique-meirelles",
+      "tipo": "pessoa",
+      "nome": "Henrique Meirelles",
+      "apelidos": [],
+      "papel": "Ex-presidente do Banco Central e ex-ministro da Fazenda",
+      "situacao": "citado",
+      "resumo": "Recebeu do Master por consultoria entre 2024 e 2025: R$ 18,5 milhões segundo a Folha, R$ 8 milhões segundo a CNN.",
+      "defesa": "Diz que fez consultoria opinativa sobre macroeconomia e mercado financeiro entre março de 2024 e julho de 2025.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Mais Goiás",
+          "titulo": "Master declarou pagamentos ao goiano Henrique Meirelles, além de Temer e Mantega",
+          "url": "https://www.maisgoias.com.br/politica/master-declarou-pagamentos-ao-goiano-henrique-meirelles-alem-de-temer-e-mantega/"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "x": [
+          "meirelles"
+        ],
+        "instagram": [
+          "henriquemeirelles.real"
+        ],
+        "facebook": [
+          "hmeirellesoficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q3428247",
+      "dominios": [
+        "henriquemeirelles.com.br"
+      ]
+    },
+    {
+      "id": "ricardo-lewandowski",
+      "tipo": "pessoa",
+      "nome": "Ricardo Lewandowski",
+      "apelidos": [],
+      "papel": "Ex-ministro do STF e ex-ministro da Justiça",
+      "situacao": "citado",
+      "resumo": "O escritório da família recebeu cerca de R$ 6 milhões do Master a partir de novembro de 2023, segundo dados da Receita enviados à CPI.",
+      "defesa": "Deixou a sociedade do escritório em janeiro de 2024, antes de assumir o Ministério da Justiça.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        },
+        {
+          "veiculo": "Diário do Poder",
+          "titulo": "Lewandowski, líder de Lula, Mantega etc.: veja lista do Master",
+          "url": "https://diariodopoder.com.br/brasil-e-regioes/lewandowski-lider-de-lula-mantega-etc-veja-lista-do-master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "viviane-barci-de-moraes",
+      "tipo": "pessoa",
+      "nome": "Viviane Barci de Moraes",
+      "apelidos": [],
+      "papel": "Advogada, esposa do ministro Alexandre de Moraes",
+      "situacao": "citado",
+      "resumo": "O escritório dela tinha contrato de R$ 129 milhões em três anos com o Master (R$ 3,6 milhões por mês), achado no celular de Vorcaro e revelado por O Globo em dezembro de 2025. Dados da Receita indicam R$ 80,2 milhões pagos em 2024 e 2025.",
+      "defesa": "O escritório diz que a consultoria tratou de compliance e da revisão do código de ética do banco.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "Escritório da esposa de Moraes tinha contrato de R$ 129 milhões com o Banco Master",
+          "url": "https://www.gazetadopovo.com.br/republica/escritorio-esposa-moraes-contrato-129-milhoes-banco-master/",
+          "data": "2025-12"
+        },
+        {
+          "veiculo": "Itatiaia",
+          "titulo": "Contrato do Master com escritório de mulher de Moraes era de R$ 129 milhões",
+          "url": "https://www.itatiaia.com.br/economia/contrato-do-master-com-escritorio-de-mulher-de-moraes-era-de-r-129-milhoes/",
+          "data": "2025-12"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "alexandre-de-moraes",
+      "tipo": "pessoa",
+      "nome": "Alexandre de Moraes",
+      "apelidos": [],
+      "papel": "Ministro do STF",
+      "situacao": "citado",
+      "resumo": "Relatório da PF extraído do celular de Vorcaro, com sigilo retirado em 01/09/2026, indica que o banqueiro teria recorrido ao ministro diante do avanço das investigações. O escritório da esposa tinha contrato de R$ 129 milhões com o Master. Esteve em evento em Londres (2024) bancado por Vorcaro.",
+      "defesa": "Nega ter conversado com Vorcaro sobre o caso; a PGR defende a nulidade do relatório por envolver ministro do STF sem autorização do plenário.",
+      "fontes": [
+        {
+          "veiculo": "Congresso em Foco",
+          "titulo": "Mendonça retira sigilo de apuração sobre mensagens de Vorcaro e Moraes",
+          "url": "https://www.congressoemfoco.com.br/noticia/121852/mendonca-retira-sigilo-de-apuracao-sobre-mensagens-de-vorcaro-e-moraes",
+          "data": "2026-09-01"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Mendonça libera caso Moraes para julgamento no plenário do STF",
+          "url": "https://www.poder360.com.br/poder-justica/mendonca-libera-caso-moraes-para-julgamento-no-plenario-do-stf/",
+          "data": "2026-09"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "dias-toffoli",
+      "tipo": "pessoa",
+      "nome": "Dias Toffoli",
+      "apelidos": [
+        "José Antonio Dias Toffoli"
+      ],
+      "papel": "Ministro do STF, relator do caso até fevereiro de 2026",
+      "situacao": "citado",
+      "resumo": "É sócio da Maridt, empresa que negociou parte do resort Tayayá com um fundo da Reag ligado ao cunhado de Vorcaro (repasses de até R$ 35 milhões, segundo o Estadão). Viajou em jato de empresa ligada a Vorcaro. Deixou a relatoria em 12/02/2026 e se declarou suspeito em 11/03/2026.",
+      "defesa": "O gabinete diz que ele nunca recebeu valores de Vorcaro ou Zettel e que declarou à Receita os valores da Maridt.",
+      "fontes": [
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Toffoli admite ser sócio de empresa que negociou resort com fundo ligado a Vorcaro",
+          "url": "https://www.infomoney.com.br/politica/toffoli-admite-ser-socio-de-empresa-que-negociou-resort-com-fundo-ligado-a-vorcaro/amp/",
+          "data": "2026-02"
+        },
+        {
+          "veiculo": "Poder360",
+          "titulo": "Toffoli viajou em jato de empresa ligada a Vorcaro, diz jornal",
+          "url": "https://www.poder360.com.br/poder-justica/toffoli-viajou-em-jato-de-empresa-ligada-a-vorcaro-diz-jornal/"
+        },
+        {
+          "veiculo": "A Gazeta",
+          "titulo": "Caso Master: Dias Toffoli se declara suspeito e não vai julgar prisão de Daniel Vorcaro",
+          "url": "https://www.agazeta.com.br/mundo/caso-master-dias-toffoli-se-declara-suspeito-e-nao-vai-julgar-prisao-de-daniel-vorcaro-0326",
+          "data": "2026-03"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "ibaneis-rocha",
+      "tipo": "pessoa",
+      "nome": "Ibaneis Rocha",
+      "apelidos": [],
+      "papel": "Ex-governador do Distrito Federal (MDB)",
+      "situacao": "citado",
+      "resumo": "Como governador, defendeu a compra do Master pelo BRB, vetada pelo Banco Central em setembro de 2025, e indicou Paulo Henrique Costa para a presidência do banco. A relação dele com Vorcaro é um dos pontos de interesse da PF. Desistiu da candidatura ao Senado.",
+      "defesa": "Não foi alvo de operação; nega irregularidades.",
+      "fontes": [
+        {
+          "veiculo": "Revista Fórum",
+          "titulo": "Bancada do Master: quem segue na disputa eleitoral em 2026?",
+          "url": "https://revistaforum.com.br/politica/bancada-do-master-eleicoes-2026/",
+          "data": "2026-07-21"
+        },
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Quem é Paulo Henrique Costa, ex-presidente do BRB preso em operação da PF",
+          "url": "https://www.cnnbrasil.com.br/politica/quem-e-paulo-henrique-costa-ex-presidente-do-brb-preso-em-operacao-da-pf/",
+          "data": "2026-04-16"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "joao-henrique-caldas",
+      "tipo": "pessoa",
+      "nome": "João Henrique Caldas",
+      "apelidos": [],
+      "papel": "Ex-prefeito de Maceió (JHC), governador eleito de Alagoas (PSDB)",
+      "situacao": "citado",
+      "resumo": "Na gestão dele, o instituto de previdência de Maceió (Iprev) aplicou R$ 97 milhões em Letras Financeiras do Master entre dezembro de 2023 e maio de 2024. A PF investiga as aplicações.",
+      "defesa": "Diz que não participou da decisão de investir e atribui a responsabilidade à estrutura técnica do Iprev.",
+      "fontes": [
+        {
+          "veiculo": "Gazeta do Povo",
+          "titulo": "13 eleitos em 2026 que aparecem em registros ligados a Vorcaro",
+          "url": "https://www.gazetadopovo.com.br/eleicoes/2026/13-eleitos-em-2026-que-aparecem-em-registros-ligados-a-daniel-vorcaro/",
+          "data": "2026-10"
+        }
+      ],
+      "verificado_em": "2026-10-27",
+      "redes": {
+        "facebook": [
+          "jhc"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q25175968"
+    },
+    {
+      "id": "metropoles",
+      "tipo": "veiculo",
+      "nome": "Metrópoles",
+      "apelidos": [],
+      "papel": "Portal de notícias de Brasília",
+      "situacao": "pagamento-suspeito",
+      "resumo": "Relatório do Coaf revelado pelo Estadão aponta R$ 27,2 milhões do Master ao portal em 2024 e 2025, classificados como suspeitos, com repasse imediato a empresas da família de Luiz Estevão. Segundo o UOL, 11 textos foram alterados após pedidos de Vorcaro.",
+      "defesa": "Diz que o dinheiro foi patrocínio do Will Bank à transmissão da Série D e que os contratos não influenciaram a cobertura.",
+      "dominios": [
+        "metropoles.com"
+      ],
+      "redes": {
+        "instagram": [
+          "metropoles"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q56350071",
+      "fontes": [
+        {
+          "veiculo": "Bahia Notícias",
+          "titulo": "Coaf aponta repasse de R$ 27 milhões do Banco Master ao Metrópoles",
+          "url": "https://www.bahianoticias.com.br/noticia/315652-coaf-aponta-repasse-de-r-27-milhoes-do-banco-master-ao-metropoles-e-movimentacoes-para-empresas-ligadas-a-luiz-estevao",
+          "data": "2026-04"
+        },
+        {
+          "veiculo": "Jornal do Brasil",
+          "titulo": "Master pagou R$ 27 mi ao site Metrópoles, que fez débito imediato a empresas da família de Luiz Estevão",
+          "url": "https://www.jb.com.br/brasil/2026/04/1059240-master-pagou-rs-27-mi-ao-site-metropoles-que-fez-debito-imediato-a-empresas-da-familia-de-luiz-estevao.html",
+          "data": "2026-04"
+        },
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "diario-do-centro-do-mundo",
+      "tipo": "veiculo",
+      "nome": "Diário do Centro do Mundo",
+      "apelidos": [],
+      "papel": "Portal de notícias (DCM)",
+      "situacao": "pagamento-suspeito",
+      "resumo": "Mensagens do celular de Vorcaro reveladas pelo UOL descrevem pagamentos mensais a partir de outubro de 2024 numa \"parceria\" para evitar publicações negativas sobre o banqueiro.",
+      "defesa": "Nega ter recebido recursos ou benefícios de investigados e anunciou que vai processar o UOL.",
+      "dominios": [
+        "diariodocentrodomundo.com.br"
+      ],
+      "redes": {
+        "x": [
+          "DCM_online"
+        ],
+        "tiktok": [
+          "dcmonline"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q18245849",
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "estadao",
+      "tipo": "veiculo",
+      "nome": "Estadão",
+      "apelidos": [],
+      "papel": "Jornal O Estado de S. Paulo",
+      "situacao": "patrocinado",
+      "resumo": "O próprio jornal confirmou ter recebido R$ 1,12 milhão do Master entre 2021 e 2025 em campanhas, mídia digital e patrocínio da cobertura de Fórmula 1.",
+      "defesa": "Diz que foram contratos de publicidade e patrocínio regulares; o jornal publicou reportagens críticas ao banco.",
+      "dominios": [
+        "estadao.com.br"
+      ],
+      "redes": {
+        "x": [
+          "estadao"
+        ],
+        "instagram": [
+          "estadao"
+        ],
+        "facebook": [
+          "estadao"
+        ],
+        "tiktok": [
+          "estadao"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q1628345",
+      "fontes": [
+        {
+          "veiculo": "Metrópoles",
+          "titulo": "Jornal dos banqueiros, Estadão recebeu R$ 1,12 milhão do Master",
+          "url": "https://www.metropoles.com/brasil/jorna-dos-banqueiros-estadao-recebeu-r-112-milhao-do-master"
+        },
+        {
+          "veiculo": "Diário da Manhã",
+          "titulo": "Jornal Estadão recebeu R$ 1,12 milhão do Banco Master em contratos entre 2021 e 2025",
+          "url": "https://www.dm.com.br/brasil/jornal-estadao-recebeu-r-112-milhao-do-banco-master-em-contratos-entre-2021-e-2025/"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "cartacapital",
+      "tipo": "veiculo",
+      "nome": "CartaCapital",
+      "apelidos": [],
+      "papel": "Revista semanal",
+      "situacao": "patrocinado",
+      "resumo": "Segundo o UOL, o Master fechou com a revista um patrocínio de cinco anos em 2021, com R$ 300 mil adiantados em dezembro de 2020; em 2024 a diretora pediu \"adiantamento de publicidade\" a Vorcaro.",
+      "defesa": "A diretora Manuela Carta diz que foi contrato publicitário regular, nos padrões do mercado.",
+      "dominios": [
+        "cartacapital.com.br"
+      ],
+      "redes": {
+        "x": [
+          "cartacapital"
+        ],
+        "instagram": [
+          "cartacapital"
+        ],
+        "facebook": [
+          "CartaCapital"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q5047031",
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "cnn-brasil",
+      "tipo": "veiculo",
+      "nome": "CNN Brasil",
+      "apelidos": [],
+      "papel": "Canal de notícias",
+      "situacao": "patrocinado",
+      "resumo": "O Master era anunciante da emissora. Mensagens de Vorcaro tratam de valores de patrocínio, incluindo um evento cujo patrocínio caiu de R$ 4 milhões para R$ 1 milhão.",
+      "defesa": "Nega que Vorcaro tenha sido sócio e diz que o Master era anunciante com contratos publicitários convencionais.",
+      "dominios": [
+        "cnnbrasil.com.br"
+      ],
+      "redes": {
+        "x": [
+          "cnnbrasil"
+        ],
+        "instagram": [
+          "cnnbrasil"
+        ],
+        "facebook": [
+          "cnnbrasil"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q61037218",
+      "fontes": [
+        {
+          "veiculo": "SRZD",
+          "titulo": "R$ 10 milhões por ano: mensagens expõem bastidores entre Banco Master e CNN",
+          "url": "https://srzd.com/blog/brasil/politica/r-10-milhoes-por-ano-mensagens-expoem-bastidores-entre-banco-master-e-cnn/"
+        },
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "valor-economico",
+      "tipo": "veiculo",
+      "nome": "Valor Econômico",
+      "apelidos": [],
+      "papel": "Jornal de economia do Grupo Globo",
+      "situacao": "patrocinado",
+      "resumo": "O Master foi o principal patrocinador do Summit Valor Econômico Brazil-USA (maio de 2024). A Globo demitiu o diretor-geral da Editora Globo, Frederic Kachar, por \"relação inadequada\" com Vorcaro.",
+      "defesa": "A Globo afirma que houve relação inadequada de um executivo com um anunciante, defende a independência editorial e cita reportagens críticas ao banco.",
+      "dominios": [
+        "valor.globo.com",
+        "valor.com.br"
+      ],
+      "redes": {
+        "x": [
+          "valor_economico",
+          "valoreconomico"
+        ],
+        "instagram": [
+          "valoreconomico"
+        ],
+        "facebook": [
+          "valoreconomico"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q958931",
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "brazil-journal",
+      "tipo": "veiculo",
+      "nome": "Brazil Journal",
+      "apelidos": [],
+      "papel": "Site de notícias de negócios",
+      "situacao": "citado",
+      "resumo": "Segundo o UOL, o fundador consultava Vorcaro antes de publicar textos sobre o Master. Em 2023 a Foone, empresa ligada a Flávio Carneiro, assessor de imagem de Vorcaro, comprou 49,86% do site. Nenhum pagamento do banco ao veículo foi confirmado nas fontes.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "dominios": [
+        "braziljournal.com"
+      ],
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "istoe",
+      "tipo": "veiculo",
+      "nome": "IstoÉ",
+      "apelidos": [],
+      "papel": "Revista semanal (e IstoÉ Dinheiro)",
+      "situacao": "citado",
+      "resumo": "Mensagens mostram Vorcaro pedindo capa da IstoÉ Dinheiro sobre empresa em que investiu e dizendo que \"na IstoÉ é que controlamos mais\". Flávio Carneiro, investidor das revistas e assessor de Vorcaro, intermediava os pedidos.",
+      "defesa": "A revista não se manifestou.",
+      "dominios": [
+        "istoe.com.br",
+        "istoedinheiro.com.br"
+      ],
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "conjur",
+      "tipo": "veiculo",
+      "nome": "Consultor Jurídico",
+      "apelidos": [],
+      "papel": "Revista eletrônica de direito (ConJur)",
+      "situacao": "citado",
+      "resumo": "Segundo a Jovem Pan, o diretor Márcio Chaer organizou com Vorcaro a lista de convidados de um fórum jurídico em Londres (2024) patrocinado pelo Master. As mensagens não indicam influência no conteúdo.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "dominios": [
+        "conjur.com.br"
+      ],
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "reinaldo-azevedo",
+      "tipo": "pessoa",
+      "nome": "Reinaldo Azevedo",
+      "apelidos": [],
+      "papel": "Jornalista, apresentador do podcast Reconversa",
+      "situacao": "patrocinado",
+      "resumo": "Contrato de patrocínio do podcast de R$ 1,2 milhão (12 parcelas de R$ 100 mil, a partir de março de 2024) com a Super, empresa ligada ao Master; sete parcelas foram pagas, segundo ele.",
+      "defesa": "Nega interferência editorial e contato com Vorcaro; diz que o contrato é anterior às acusações públicas contra o banco.",
+      "redes": {
+        "x": [
+          "reinaldoazevedo"
+        ],
+        "facebook": [
+          "ReinaldoAzevedoColunista"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q7310246",
+      "dominios": [
+        "reinaldoazevedo.com.br"
+      ],
+      "fontes": [
+        {
+          "veiculo": "Revista Oeste",
+          "titulo": "Reinaldo Azevedo recebeu R$ 100 mil mensais do Banco Master",
+          "url": "https://revistaoeste.com/politica/reinaldo-azevedo-recebeu-daniel-vorcaro/"
+        },
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "leo-dias",
+      "tipo": "pessoa",
+      "nome": "Léo Dias",
+      "apelidos": [],
+      "papel": "Jornalista de celebridades",
+      "situacao": "patrocinado",
+      "exige_contexto": true,
+      "resumo": "Declarou que a empresa dele recebeu R$ 9,9 milhões em contratos de publicidade com o grupo Master.",
+      "defesa": "Diz que foram contratos de publicidade.",
+      "fontes": [
+        {
+          "veiculo": "Jornal Opção",
+          "titulo": "R$ 65 milhões em repasses: lista liga Banco Master a políticos, mídia e ministros",
+          "url": "https://www.jornalopcao.com.br/ultimas-noticias/r-65-milhoes-em-repasses-lista-liga-banco-master-a-politicos-midia-e-ministros-813853/"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "carlos-massa",
+      "tipo": "pessoa",
+      "nome": "Carlos Massa",
+      "apelidos": [
+        "Carlos Roberto Massa"
+      ],
+      "papel": "Apresentador de TV (Ratinho)",
+      "situacao": "patrocinado",
+      "resumo": "Empresas do Grupo Massa receberam cerca de R$ 24 milhões do Master em ações publicitárias.",
+      "defesa": "Diz que foram ações publicitárias.",
+      "redes": {
+        "x": [
+          "ratinhodosbt"
+        ],
+        "instagram": [
+          "oratinho"
+        ],
+        "facebook": [
+          "oratinhotv"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q10357563",
+      "fontes": [
+        {
+          "veiculo": "Jornal Opção",
+          "titulo": "R$ 65 milhões em repasses: lista liga Banco Master a políticos, mídia e ministros",
+          "url": "https://www.jornalopcao.com.br/ultimas-noticias/r-65-milhoes-em-repasses-lista-liga-banco-master-a-politicos-midia-e-ministros-813853/"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "luiz-estevao",
+      "tipo": "pessoa",
+      "nome": "Luiz Estevão",
+      "apelidos": [
+        "Luiz Estevão de Oliveira Neto"
+      ],
+      "papel": "Ex-senador, dono do Metrópoles",
+      "situacao": "citado",
+      "resumo": "O Coaf aponta que o Metrópoles repassou de imediato a empresas da família dele (Madison, Sense e Macondo) parte dos R$ 27,2 milhões recebidos do Master.",
+      "defesa": "Diz que o dinheiro foi patrocínio do Will Bank à Série D e que pode destinar os recursos como quiser.",
+      "fontes": [
+        {
+          "veiculo": "Bahia Notícias",
+          "titulo": "Coaf aponta repasse de R$ 27 milhões do Banco Master ao Metrópoles",
+          "url": "https://www.bahianoticias.com.br/noticia/315652-coaf-aponta-repasse-de-r-27-milhoes-do-banco-master-ao-metropoles-e-movimentacoes-para-empresas-ligadas-a-luiz-estevao",
+          "data": "2026-04"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "gabriela-prioli",
+      "tipo": "pessoa",
+      "nome": "Gabriela Prioli",
+      "apelidos": [],
+      "papel": "Advogada e comunicadora",
+      "situacao": "citado",
+      "resumo": "Reportagem do Estadão, com documentos e mensagens, a coloca num grupo de cerca de 15 influenciadores contratados para defender o banco.",
+      "defesa": "Nega ter sido contratada, diz que nunca recebeu do banco e que a equipe dela nunca teve contato com a instituição.",
+      "redes": {
+        "x": [
+          "GabrielaPrioli"
+        ],
+        "instagram": [
+          "gabrielaprioli"
+        ],
+        "facebook": [
+          "gabriela.pdv"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q88986089",
+      "fontes": [
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "banco-master",
+      "tipo": "empresa",
+      "nome": "Banco Master",
+      "apelidos": [],
+      "casar_nome": false,
+      "papel": "Banco de Daniel Vorcaro (antigo Banco Máxima)",
+      "situacao": "liquidada",
+      "resumo": "Liquidado pelo Banco Central em 18/11/2025, no dia da 1ª fase da Compliance Zero. O FGC estima cerca de R$ 52 bilhões em garantias a pagar pelas liquidações do grupo.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "redes": {
+        "instagram": [
+          "bancomasteroficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q117196611",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "will-bank",
+      "tipo": "empresa",
+      "nome": "Will Bank",
+      "apelidos": [
+        "Will Financeira"
+      ],
+      "papel": "Banco digital do grupo Master",
+      "situacao": "liquidada",
+      "resumo": "Liquidado pelo Banco Central em janeiro de 2026. Foi o patrocinador da transmissão da Série D usado para justificar os R$ 27,2 milhões pagos ao Metrópoles.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "B3 Bora Investir",
+          "titulo": "Quais empresas tiveram liquidação decretada por conta do Banco Master",
+          "url": "https://borainvestir.b3.com.br/noticias/quais-empresas-tiveram-liquidacao-decretada-por-conta-do-banco-master-veja-lista/"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "reag-investimentos",
+      "tipo": "empresa",
+      "nome": "Reag Investimentos",
+      "apelidos": [
+        "CBSF DTVM"
+      ],
+      "papel": "Gestora de fundos",
+      "situacao": "liquidada",
+      "resumo": "A CBSF DTVM, administradora dos fundos da Reag, foi liquidada pelo Banco Central em janeiro de 2026. É suspeita de administrar fundos usados para lavagem em favor do Master.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Diário de Pernambuco",
+          "titulo": "Fraude do Banco Master envolve várias instituições; entenda o papel de cada uma",
+          "url": "https://www.diariodepernambuco.com.br/economia/2026/03/11709244-fraude-do-banco-master-envolve-varias-instituicoes-entenda-o-papel-de-cada-uma.html",
+          "data": "2026-03"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "banco-pleno",
+      "tipo": "empresa",
+      "nome": "Banco Pleno",
+      "apelidos": [],
+      "papel": "Banco controlado por Augusto Lima",
+      "situacao": "liquidada",
+      "resumo": "Banco controlado por Augusto Lima, ex-sócio de Vorcaro, liquidado pelo Banco Central no desdobramento do caso.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "B3 Bora Investir",
+          "titulo": "Quais empresas tiveram liquidação decretada por conta do Banco Master",
+          "url": "https://borainvestir.b3.com.br/noticias/quais-empresas-tiveram-liquidacao-decretada-por-conta-do-banco-master-veja-lista/"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "grupo-fictor",
+      "tipo": "empresa",
+      "nome": "Grupo Fictor",
+      "apelidos": [
+        "Fictor Holding",
+        "Fictor Invest"
+      ],
+      "papel": "Grupo financeiro que anunciou a compra do Master",
+      "situacao": "alvo-de-operacao",
+      "resumo": "Anunciou a compra do Master um dia antes da liquidação. Alvo da Operação Fallax (25/03/2026) e em recuperação judicial com dívidas de cerca de R$ 4 bilhões.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Diário de Pernambuco",
+          "titulo": "Fraude do Banco Master envolve várias instituições; entenda o papel de cada uma",
+          "url": "https://www.diariodepernambuco.com.br/economia/2026/03/11709244-fraude-do-banco-master-envolve-varias-instituicoes-entenda-o-papel-de-cada-uma.html",
+          "data": "2026-03"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "havengate",
+      "tipo": "empresa",
+      "nome": "Havengate Development Fund",
+      "apelidos": [
+        "Havengate"
+      ],
+      "papel": "Fundo registrado no Texas (EUA)",
+      "situacao": "investigado",
+      "resumo": "Fundo que recebeu dinheiro de Vorcaro; a PF apura se ele custeou a permanência de Eduardo Bolsonaro nos EUA e o filme Dark Horse.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "BBC Brasil (via O Povo)",
+          "titulo": "Havengate: o fundo na mira da PF que conecta Vorcaro, Flávio e Eduardo Bolsonaro",
+          "url": "https://www.opovo.com.br/agencia/bbc/2026/05/16/havengate-o-fundo-na-mira-da-pf-que-conecta-vorcaro-flavio-e-eduardo-bolsonaro.html",
+          "data": "2026-05-16"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "go-up-entertainment",
+      "tipo": "empresa",
+      "nome": "Go Up Entertainment",
+      "apelidos": [],
+      "papel": "Produtora do filme Dark Horse",
+      "situacao": "citado",
+      "resumo": "Produtora de Dark Horse. A dona, Karina Gama, disse que Vorcaro financiou mais de 90% do orçamento. ONGs ligadas a ela foram alvo da Operação Make Up (10/09/2026).",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Jornal Opção",
+          "titulo": "PF mira produtora de filme sobre Bolsonaro e deputado Mario Frias em operação sobre emendas",
+          "url": "https://www.jornalopcao.com.br/policia/pf-mira-produtora-de-filme-sobre-bolsonaro-e-deputado-mario-frias-em-operacao-sobre-emendas-866555/",
+          "data": "2026-09-10"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "entre-investimentos",
+      "tipo": "empresa",
+      "nome": "Entre Investimentos e Participações",
+      "apelidos": [
+        "Entre Investimentos"
+      ],
+      "papel": "Empresa ligada ao operador \"Mineiro\"",
+      "situacao": "citado",
+      "resumo": "Recebeu R$ 2,3 milhões do Master; parte do dinheiro de Vorcaro teria seguido por ela ao fundo Havengate.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "BBC Brasil (via O Povo)",
+          "titulo": "Havengate: o fundo na mira da PF que conecta Vorcaro, Flávio e Eduardo Bolsonaro",
+          "url": "https://www.opovo.com.br/agencia/bbc/2026/05/16/havengate-o-fundo-na-mira-da-pf-que-conecta-vorcaro-flavio-e-eduardo-bolsonaro.html",
+          "data": "2026-05-16"
+        },
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "super-empreendimentos",
+      "tipo": "empresa",
+      "nome": "Super Empreendimentos",
+      "apelidos": [],
+      "papel": "Empresa ligada ao Master",
+      "situacao": "citado",
+      "resumo": "Recebeu R$ 48,5 milhões de Fabiano Zettel em 2022 e é apontada como intermediária de pagamentos a operadores; pagou o patrocínio do podcast de Reinaldo Azevedo.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "Wikipédia",
+          "titulo": "Escândalo do Banco Master",
+          "url": "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Banco_Master"
+        },
+        {
+          "veiculo": "Brasil Paralelo (resumo de UOL, Estadão, Folha e Metrópoles)",
+          "titulo": "Veja os jornais que tinham relação com Vorcaro",
+          "url": "https://www.brasilparalelo.com.br/noticias/veja-os-jornais-que-tinham-relacao-com-vorcaro"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "maridt-participacoes",
+      "tipo": "empresa",
+      "nome": "Maridt Participações",
+      "apelidos": [
+        "Maridt"
+      ],
+      "papel": "Empresa da família do ministro Dias Toffoli",
+      "situacao": "citado",
+      "resumo": "Negociou parte do resort Tayayá com um fundo da Reag ligado ao cunhado de Vorcaro. A CPI aprovou a quebra de sigilo em 25/02/2026.",
+      "defesa": "Toffoli diz que declarou os valores à Receita e nunca recebeu de Vorcaro ou Zettel.",
+      "fontes": [
+        {
+          "veiculo": "InfoMoney",
+          "titulo": "Toffoli admite ser sócio de empresa que negociou resort com fundo ligado a Vorcaro",
+          "url": "https://www.infomoney.com.br/politica/toffoli-admite-ser-socio-de-empresa-que-negociou-resort-com-fundo-ligado-a-vorcaro/amp/",
+          "data": "2026-02"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "pollaris-consultoria",
+      "tipo": "empresa",
+      "nome": "Pollaris Consultoria",
+      "apelidos": [],
+      "papel": "Empresa de Guido Mantega",
+      "situacao": "citado",
+      "resumo": "Recebeu R$ 14 milhões do Master, segundo dados da Receita enviados à CPI.",
+      "defesa": "Mantega diz que prestou consultoria e não sabia de irregularidades.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Master declarou pagamentos a Temer, Lewandowski, Mantega e ACM Neto",
+          "url": "https://www.cnnbrasil.com.br/politica/master-declarou-pagamentos-a-temer-lewandowski-mantega-wagner-e-acm-neto/"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "epitome",
+      "tipo": "empresa",
+      "nome": "Epítome S.A.",
+      "apelidos": [
+        "Epitome SA"
+      ],
+      "papel": "Empresa apontada pela PF como laranja",
+      "situacao": "citado",
+      "resumo": "Segundo a PF, comprou o apartamento em Salvador que seria vantagem indevida ligada ao senador Jaques Wagner.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "fontes": [
+        {
+          "veiculo": "CNN Brasil",
+          "titulo": "Entenda em 5 pontos a operação da PF contra Jaques Wagner",
+          "url": "https://www.cnnbrasil.com.br/politica/entenda-em-5-pontos-a-operacao-da-pf-contra-jaques-wagner/",
+          "data": "2026-06"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    },
+    {
+      "id": "brb",
+      "tipo": "empresa",
+      "nome": "Banco de Brasília",
+      "apelidos": [],
+      "casar_nome": false,
+      "papel": "Banco público do Distrito Federal (BRB)",
+      "situacao": "citado",
+      "resumo": "Comprou mais de R$ 12 bilhões em carteiras de crédito do Master e tentou comprar o banco, operação vetada pelo Banco Central. O ex-presidente Paulo Henrique Costa foi preso. Os clientes do BRB não têm relação com o caso.",
+      "defesa": "Sem manifestação pública localizada nas fontes consultadas.",
+      "dominios": [
+        "brb.com.br"
+      ],
+      "redes": {
+        "x": [
+          "brb_oficial"
+        ],
+        "facebook": [
+          "BancoBRB.Oficial"
+        ]
+      },
+      "fonte_redes": "https://www.wikidata.org/wiki/Q4854119",
+      "fontes": [
+        {
+          "veiculo": "Diário de Pernambuco",
+          "titulo": "Fraude do Banco Master envolve várias instituições; entenda o papel de cada uma",
+          "url": "https://www.diariodepernambuco.com.br/economia/2026/03/11709244-fraude-do-banco-master-envolve-varias-instituicoes-entenda-o-papel-de-cada-uma.html",
+          "data": "2026-03"
+        }
+      ],
+      "verificado_em": "2026-10-27"
+    }
+  ]
+}

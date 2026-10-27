@@ -1,0 +1,15 @@
+{
+  "name": "alerta-master",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Extensão para Chrome e Firefox que marca conteúdo ligado ao caso Banco Master, com fontes.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validar": "node scripts/validar-lista.mjs",
+    "test": "node scripts/validar-lista.mjs && node --test tests/*.test.mjs",
+    "icones": "node scripts/gerar-icones.mjs"
+  }
+}

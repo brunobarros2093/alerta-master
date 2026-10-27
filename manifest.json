@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Alerta Master",
+  "version": "0.1.0",
+  "description": "Marca ou cobre posts, notícias, perfis e sites ligados ao caso Banco Master, com fontes e a versão de cada citado.",
+  "icons": {
+    "16": "icones/16.png",
+    "32": "icones/32.png",
+    "48": "icones/48.png",
+    "128": "icones/128.png"
+  },
+  "action": {
+    "default_title": "Alerta Master: opções e lista",
+    "default_icon": {
+      "16": "icones/16.png",
+      "32": "icones/32.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/fundo.js",
+    "scripts": ["src/nucleo.js", "src/fundo.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/nucleo.js", "src/conteudo.js"],
+      "css": ["src/conteudo.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "src/opcoes.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://raw.githubusercontent.com/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "alerta-master@alerta-master",
+      "strict_min_version": "121.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

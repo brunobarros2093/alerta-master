@@ -1,0 +1,106 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const AM = require('../src/nucleo.js');
+const lista = JSON.parse(readFileSync(new URL('../data/envolvidos.json', import.meta.url), 'utf8'));
+const buscador = AM.criarBuscador(lista.envolvidos);
+const ids = (achados) => achados.map((e) => e.id).sort();
+
+test('a lista publicada passa na validação', () => {
+  assert.deepEqual(AM.validarLista(lista), []);
+});
+
+test('acha nome sem depender de acento nem de caixa', () => {
+  assert.deepEqual(ids(buscador.noTexto('Defesa de DANIEL vorcaro recorre ao STF')), ['daniel-vorcaro']);
+  assert.deepEqual(ids(buscador.noTexto('O ex-governador Claudio Castro falou hoje')), ['claudio-castro']);
+});
+
+test('não acha nome dentro de outra palavra', () => {
+  assert.deepEqual(buscador.noTexto('jaques wagnerismo é um termo inventado'), []);
+});
+
+test('acha o perfil pelo @ no texto', () => {
+  assert.deepEqual(ids(buscador.noTexto('Resposta a @HugoMottaPB sobre a pauta')), ['hugo-motta']);
+});
+
+test('nome comum só dispara com contexto do caso', () => {
+  assert.deepEqual(buscador.noTexto('Augusto Lima venceu o torneio de xadrez da escola'), []);
+  assert.deepEqual(ids(buscador.noTexto('Augusto Lima, ex-sócio do Master, depõe à PF')), ['augusto-lima']);
+});
+
+test('exceção global (nao_e_quando) evita o homônimo', () => {
+  assert.deepEqual(buscador.noTexto('Augusto Lima faz 20 pontos no basquete e a PF não tem nada com isso'), []);
+});
+
+test('veículo não casa pelo nome no texto, só pelo domínio', () => {
+  assert.deepEqual(buscador.noTexto('Segundo o Estadão, a votação fica para amanhã'), []);
+  assert.deepEqual(ids(buscador.naUrl('https://www.estadao.com.br/politica/algo', 'g1.globo.com')), ['estadao']);
+  assert.deepEqual(ids(buscador.naUrl('https://valor.globo.com/financas/x', 'google.com')), ['valor-economico']);
+});
+
+test('link interno do próprio portal não conta como link para o domínio', () => {
+  assert.deepEqual(buscador.naUrl('https://www.metropoles.com/brasil/x', 'metropoles.com'), []);
+});
+
+test('acha perfil em links de redes sociais', () => {
+  assert.deepEqual(ids(buscador.naUrl('https://x.com/HugoMottaPB/status/123', 'x.com')), ['hugo-motta']);
+  assert.deepEqual(ids(buscador.naUrl('https://www.instagram.com/hugomottapb/', 'instagram.com')), ['hugo-motta']);
+  assert.deepEqual(ids(buscador.naUrl('https://twitter.com/estadao', 'x.com')), ['estadao']);
+  assert.deepEqual(buscador.naUrl('https://x.com/home', 'x.com'), []);
+});
+
+test('decidir respeita gravidade, ações configuradas e enganos', () => {
+  const config = AM.configPadrao();
+  const porId = (id) => lista.envolvidos.find((e) => e.id === id);
+  const base = { config, enganos: [], host: 'exemplo.com', assinatura: 'abc' };
+
+  const r = AM.decidir([porId('hugo-motta'), porId('daniel-vorcaro')], base);
+  assert.equal(r.acao, 'esconder');
+  assert.equal(r.fichas[0].id, 'daniel-vorcaro');
+
+  assert.equal(AM.decidir([porId('hugo-motta')], base).acao, 'marcar');
+
+  const ignorando = { ...base, config: AM.mesclarConfig({ acoes: { citado: 'ignorar' } }) };
+  assert.equal(AM.decidir([porId('hugo-motta')], ignorando), null);
+
+  const noPost = { ...base, enganos: [{ id: 'hugo-motta', escopo: 'post', assinatura: 'abc' }] };
+  assert.equal(AM.decidir([porId('hugo-motta')], noPost), null);
+  assert.ok(AM.decidir([porId('hugo-motta')], { ...noPost, assinatura: 'outro' }));
+
+  const noSite = { ...base, enganos: [{ id: 'hugo-motta', escopo: 'site', host: 'exemplo.com' }] };
+  assert.equal(AM.decidir([porId('hugo-motta')], noSite), null);
+  assert.ok(AM.decidir([porId('hugo-motta')], { ...noSite, host: 'outro.com' }));
+});
+
+test('mesclarConfig descarta ação inválida e completa as que faltam', () => {
+  const c = AM.mesclarConfig({ acoes: { 'foi-preso': 'apagar' } });
+  assert.equal(c.acoes['foi-preso'], 'esconder');
+  assert.equal(c.acoes.citado, 'marcar');
+  assert.equal(c.ativo, true);
+});
+
+test('validação recusa ficha sem fonte, nome de uma palavra e termo repetido', () => {
+  const ruim = {
+    atualizado_em: '2026-10-27',
+    envolvidos: [
+      { id: 'a', tipo: 'pessoa', nome: 'Ratinho', apelidos: [], papel: 'x', situacao: 'citado', resumo: 'resumo com mais de vinte letras', defesa: 'x', fontes: [], verificado_em: '2026-10-27' },
+      { id: 'b', tipo: 'pessoa', nome: 'Fulano de Tal', apelidos: [], papel: 'x', situacao: 'citado', resumo: 'resumo com mais de vinte letras', defesa: 'x', redes: { x: ['fulano'] }, fontes: [{ veiculo: 'v', titulo: 't', url: 'https://a.b' }], verificado_em: '2026-10-27' },
+      { id: 'c', tipo: 'pessoa', nome: 'Fulano de Tal', apelidos: [], papel: 'x', situacao: 'condenado', resumo: 'resumo com mais de vinte letras', defesa: 'x', fontes: [{ veiculo: 'v', titulo: 't', url: 'http://a.b' }], verificado_em: '2026-10-27' }
+    ]
+  };
+  const erros = AM.validarLista(ruim).join('\n');
+  assert.match(erros, /a: precisa de ao menos uma fonte/);
+  assert.match(erros, /a: "Ratinho" precisa ter nome e sobrenome/);
+  assert.match(erros, /b: fonte_redes/);
+  assert.match(erros, /c: situacao precisa ser/);
+  assert.match(erros, /c: "fulano de tal" já é usado por b/);
+  assert.match(erros, /c: fonte sem url https/);
+});
+
+test('assinatura é estável e ignora acento e espaços', () => {
+  assert.equal(AM.assinatura('Olá  mundo'), AM.assinatura('ola mundo'));
+  assert.notEqual(AM.assinatura('um post'), AM.assinatura('outro post'));
+});

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alerta Master</title>
+  <link rel="stylesheet" href="opcoes.css">
+</head>
+<body>
+  <header>
+    <h1>Alerta Master</h1>
+    <p class="sub">Marca ou cobre posts, notícias, perfis e sites ligados ao caso Banco Master. Código aberto e gratuito.</p>
+    <p class="alerta" id="aviso-lista"></p>
+  </header>
+
+  <main>
+    <section aria-labelledby="t-config">
+      <h2 id="t-config">Configurações</h2>
+      <label class="linha"><input type="checkbox" id="ativo"> Extensão ligada</label>
+
+      <h3>O que fazer em cada situação</h3>
+      <div id="acoes" class="grade-acoes"></div>
+
+      <h3>Sites onde a extensão não age</h3>
+      <p class="dica">Um por linha, sem https:// (ex.: <code>meusite.com.br</code>).</p>
+      <textarea id="sites" rows="3" spellcheck="false"></textarea>
+
+      <h3>Lista atualizada pela internet</h3>
+      <p class="dica">Opcional. Endereço "raw" do <code>envolvidos.json</code> no GitHub. A lista baixada só é usada se passar na validação.</p>
+      <div class="linha">
+        <input type="url" id="url-lista" placeholder="https://raw.githubusercontent.com/…/data/envolvidos.json" spellcheck="false">
+        <button id="atualizar" type="button">Atualizar agora</button>
+      </div>
+      <p class="estado" id="estado-lista" role="status"></p>
+      <p class="estado" id="salvo" role="status"></p>
+    </section>
+
+    <section aria-labelledby="t-enganos">
+      <h2 id="t-enganos">Seus "é engano"</h2>
+      <p class="dica">Ficam só no seu navegador. Se o mesmo engano aparece para muita gente, ele vira exceção para todos na lista pública: copie e mande para o projeto.</p>
+      <div class="linha">
+        <button id="copiar-enganos" type="button">Copiar para relatar</button>
+        <a id="relatar" target="_blank" rel="noopener" hidden>Abrir relato no GitHub</a>
+      </div>
+      <div id="enganos"></div>
+    </section>
+
+    <section aria-labelledby="t-lista">
+      <h2 id="t-lista">Quem está na lista</h2>
+      <p class="dica" id="resumo-lista"></p>
+      <input type="search" id="filtro" placeholder="Filtrar por nome, cargo ou veículo" aria-label="Filtrar a lista">
+      <div id="fichas"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Investigação não é condenação. Cada ficha traz o que aconteceu, a versão da pessoa ou empresa e as fontes. Achou erro ou informação desatualizada? Abra uma correção no repositório do projeto.</p>
+  </footer>
+
+  <script src="nucleo.js"></script>
+  <script src="opcoes.js"></script>
+</body>
+</html>

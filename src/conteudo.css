@@ -1,0 +1,12 @@
+/* Só o borrão fica no CSS da página; o aviso vive num Shadow DOM com estilo próprio. */
+[data-am="esconder"] > :not(.am-host) {
+  filter: blur(14px) grayscale(1) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+html[data-am-pagina="esconder"] > body {
+  filter: blur(18px) grayscale(1) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
