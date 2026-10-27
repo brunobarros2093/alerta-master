@@ -13,8 +13,8 @@ Entra quem tem **pelo menos um** destes, publicado por veículo identificável:
 3. **Decisão pública a favor do Master que está sob investigação** (ex.: aplicação de fundo de previdência
    investigada pela PF).
 
-**Registro indireto** (situação `registro-indireto`, rótulo "Aparece em registros ligados a Vorcaro", só selo por
-padrão). Para quem aparece **apenas** em:
+**Registro indireto** (situação `registro-indireto`, rótulo "Aparece em registros ligados a Vorcaro", com aviso
+próprio dizendo que o registro não indica irregularidade). Para quem aparece **apenas** em:
 
 - número na agenda do celular de Vorcaro;
 - mesmo voo ou evento pago por ele;

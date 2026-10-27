@@ -9,12 +9,12 @@
     'alvo-de-operacao': { ordem: 1, rotulo: 'Alvo de operação da PF no caso Master', acao: 'esconder' },
     'investigado': { ordem: 2, rotulo: 'Investigado no caso Master', acao: 'esconder' },
     'pagamento-suspeito': { ordem: 3, rotulo: 'Recebeu do Banco Master pagamentos apontados como suspeitos', acao: 'esconder' },
-    'delator': { ordem: 4, rotulo: 'Fez delação no caso Master', acao: 'marcar' },
-    'liquidada': { ordem: 5, rotulo: 'Liquidada pelo Banco Central no caso Master', acao: 'marcar' },
-    'patrocinado': { ordem: 6, rotulo: 'Recebeu publicidade ou patrocínio do Banco Master', acao: 'marcar' },
-    'citado': { ordem: 7, rotulo: 'Citado no caso Master', acao: 'marcar' },
+    'delator': { ordem: 4, rotulo: 'Fez delação no caso Master', acao: 'esconder' },
+    'liquidada': { ordem: 5, rotulo: 'Liquidada pelo Banco Central no caso Master', acao: 'esconder' },
+    'patrocinado': { ordem: 6, rotulo: 'Recebeu publicidade ou patrocínio do Banco Master', acao: 'esconder' },
+    'citado': { ordem: 7, rotulo: 'Citado no caso Master', acao: 'esconder' },
     // Agenda, voo, manuscrito, doação declarada, votação ou encontro: o registro existe, mas sozinho não indica irregularidade.
-    'registro-indireto': { ordem: 8, rotulo: 'Aparece em registros ligados a Vorcaro', acao: 'marcar' }
+    'registro-indireto': { ordem: 8, rotulo: 'Aparece em registros ligados a Vorcaro', acao: 'esconder' }
   };
   const ACOES = ['esconder', 'marcar', 'ignorar'];
   const TIPOS = ['pessoa', 'veiculo', 'empresa'];

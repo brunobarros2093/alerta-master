@@ -28,7 +28,7 @@ empresa**. Você decide se quer ver o conteúdo, só marcar ou ignorar.
 
 | | |
 |---|---|
-| 🧾 **Posts e notícias** | Em X, Facebook, Instagram, Reddit, YouTube, Google e sites de notícia, o bloco que cita alguém da lista ganha um aviso. Nos casos mais graves fica borrado, com o botão **Mostrar**. |
+| 🧾 **Posts e notícias** | Em X, Facebook, Instagram, Reddit, YouTube, Google e sites de notícia, o post que cita alguém da lista fica coberto por um card com a situação, o nome e o botão **Mostrar**. No modo *Só marcar*, vira um selo pequeno no canto. |
 | 👤 **Perfis e sites** | Abriu o perfil (pelo @) ou o site de alguém da lista? Aparece um aviso no topo da página. |
 | ❓ **Por quê?** | Abre a ficha: resumo, versão do citado, fontes e data da última conferência. |
 | 🙅 **É engano** | Tira a marcação só daquele post, daquele nome no site, ou em todo lugar. Fica só no seu navegador; enganos recorrentes viram correção para todos. |
@@ -45,11 +45,11 @@ Da mais grave à mais leve. Cada ficha usa a mais grave que **já aconteceu**, n
 | Alvo de operação da PF | Esconder |
 | Investigado | Esconder |
 | Recebeu pagamentos apontados como suspeitos | Esconder |
-| Fez delação | Só marcar |
-| Empresa liquidada pelo Banco Central | Só marcar |
-| Recebeu publicidade ou patrocínio declarado | Só marcar |
-| Citado no caso | Só marcar |
-| Aparece em registros ligados a Vorcaro (agenda, voo, doação declarada, votação, encontro) | Só marcar |
+| Fez delação | Esconder |
+| Empresa liquidada pelo Banco Central | Esconder |
+| Recebeu publicidade ou patrocínio declarado | Esconder |
+| Citado no caso | Esconder |
+| Aparece em registros ligados a Vorcaro (agenda, voo, doação declarada, votação, encontro) | Esconder |
 
 Veículos de imprensa são reconhecidos pelo **site e pelos perfis**, nunca pelo nome escrito no texto: "segundo o
 Estadão" não ganha selo. Nomes comuns só disparam quando o texto também fala do caso.

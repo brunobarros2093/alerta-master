@@ -23,8 +23,9 @@ jurídico.**
    de figuras públicas, com fonte (Wikidata ou site oficial). Nenhum dado de pessoa privada (parentes, funcionários),
    nenhum endereço, documento, telefone, foto ou mensagem privada.
 7. **Nada sai do navegador.** A extensão não coleta dado de quem a usa. A busca roda localmente.
-8. **Quem usa decide.** Por padrão a extensão só esconde conteúdo nos casos de medida formal ou pagamento apontado
-   como suspeito; nos demais, só marca. Tudo é configurável, e o conteúdo sempre pode ser mostrado com um clique.
+8. **Quem usa decide.** Por padrão a extensão cobre o conteúdo com um card que diz a situação e lembra que
+   investigação não é condenação. Cada situação pode passar para "só marcar" ou "ignorar", e o conteúdo sempre pode
+   ser mostrado com um clique.
 
 ## O que o projeto não faz
 

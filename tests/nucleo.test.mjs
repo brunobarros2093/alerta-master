@@ -61,7 +61,11 @@ test('decidir respeita gravidade, ações configuradas e enganos', () => {
   assert.equal(r.acao, 'esconder');
   assert.equal(r.fichas[0].id, 'daniel-vorcaro');
 
-  assert.equal(AM.decidir([porId('hugo-motta')], base).acao, 'marcar');
+  assert.equal(AM.decidir([porId('hugo-motta')], base).acao, 'esconder');
+
+  const soMarcando = { ...base, config: AM.mesclarConfig({ acoes: { citado: 'marcar' } }) };
+  assert.equal(AM.decidir([porId('hugo-motta')], soMarcando).acao, 'marcar');
+  assert.equal(AM.decidir([porId('hugo-motta'), porId('daniel-vorcaro')], soMarcando).acao, 'esconder');
 
   const ignorando = { ...base, config: AM.mesclarConfig({ acoes: { citado: 'ignorar' } }) };
   assert.equal(AM.decidir([porId('hugo-motta')], ignorando), null);
@@ -75,13 +79,13 @@ test('decidir respeita gravidade, ações configuradas e enganos', () => {
   assert.ok(AM.decidir([porId('hugo-motta')], { ...noSite, host: 'outro.com' }));
 });
 
-test('registro indireto só marca por padrão e perde para situação mais grave', () => {
+test('toda situação esconde por padrão e o rótulo é o da mais grave', () => {
   const config = AM.configPadrao();
   const porId = (id) => lista.envolvidos.find((e) => e.id === id);
   const base = { config, enganos: [], host: 'exemplo.com', assinatura: 'x' };
-  assert.equal(config.acoes['registro-indireto'], 'marcar');
+  for (const acao of Object.values(config.acoes)) assert.equal(acao, 'esconder');
   assert.deepEqual(ids(buscador.noTexto('Arthur Lira e Nikolas Ferreira votaram hoje')), ['arthur-lira', 'nikolas-ferreira']);
-  assert.equal(AM.decidir([porId('arthur-lira')], base).acao, 'marcar');
+  assert.equal(AM.decidir([porId('arthur-lira')], base).acao, 'esconder');
   assert.equal(AM.decidir([porId('arthur-lira'), porId('ciro-nogueira')], base).fichas[0].id, 'ciro-nogueira');
 });
 
@@ -91,9 +95,10 @@ test('nome ambíguo de registro indireto exige contexto', () => {
 });
 
 test('mesclarConfig descarta ação inválida e completa as que faltam', () => {
-  const c = AM.mesclarConfig({ acoes: { 'foi-preso': 'apagar' } });
+  const c = AM.mesclarConfig({ acoes: { 'foi-preso': 'apagar', citado: 'marcar' } });
   assert.equal(c.acoes['foi-preso'], 'esconder');
   assert.equal(c.acoes.citado, 'marcar');
+  assert.equal(c.acoes.patrocinado, 'esconder');
   assert.equal(c.ativo, true);
 });
 

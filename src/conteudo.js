@@ -33,6 +33,21 @@
 
   const ESTILO = `
     :host { all: initial; display: block; }
+    /* O aviso flutua sobre o post (nunca entra no fluxo dele): no X o post é uma linha flex e o aviso virava uma coluna. */
+    :host([data-modo="esconder"]) { position: absolute; inset: 0; z-index: 2147483000; }
+    :host([data-modo="marcar"]) { position: absolute; top: 8px; right: 8px; z-index: 2147483000; max-width: min(380px, calc(100% - 16px)); }
+    .cobertura { position: absolute; inset: 0; box-sizing: border-box; padding: 12px; display: flex; align-items: center;
+      justify-content: center; background: rgba(15, 13, 8, .45); border-radius: inherit; }
+    .cobertura .aviso { width: 100%; max-width: 480px; max-height: 100%; overflow: auto; box-sizing: border-box; margin: 0;
+      flex-direction: column; align-items: center; text-align: center; padding: 14px 16px; gap: 6px; }
+    .cobertura .acoes { margin: 4px 0 0; justify-content: center; }
+    /* No card em coluna, flex-basis viraria altura: volta ao tamanho do conteúdo. */
+    .cobertura .nota, .cobertura .engano { flex-basis: auto; }
+    /* Itens centralizados não encolhem sozinhos: limita a largura para as linhas de botões quebrarem. */
+    .cobertura .aviso { overflow-x: hidden; }
+    .cobertura .aviso > * { max-width: 100%; box-sizing: border-box; }
+    .cobertura .engano { width: 100%; }
+    .cobertura .engano { justify-content: center; }
     .aviso { font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #1f1a0e; background: #fff4d6;
       border: 1px solid #e0b84c; border-left: 4px solid #c7901a; border-radius: 8px; padding: 10px 12px; margin: 6px 0;
       display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
@@ -47,7 +62,7 @@
     button:hover { background: #fdf0c8; }
     button:focus-visible { outline: 2px solid #1d4ed8; outline-offset: 1px; }
     .engano { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; }
-    .engano[hidden] { display: none; }
+    [hidden] { display: none !important; }
     .pagina { position: fixed; top: 12px; left: 50%; transform: translateX(-50%); z-index: 2147483647; width: min(680px, calc(100vw - 32px));
       margin: 0; box-shadow: 0 8px 30px rgba(0,0,0,.25); }
     @media (prefers-color-scheme: dark) {
@@ -76,34 +91,47 @@
 
   // Monta o aviso dentro de um Shadow DOM para o CSS do site não bagunçar (nem ser bagunçado).
   function criarAviso({ decisao, naPagina, aoMostrar, aoEngano }) {
-    const hospedeiro = el('div', { class: 'am-host', 'data-am-host': '1' });
+    const hospedeiro = el('div', { class: 'am-host', 'data-am-host': '1', 'data-modo': naPagina ? 'pagina' : decisao.acao });
+    // Sites como o X abrem o post com qualquer clique dentro dele; o clique nos botões do aviso para aqui.
+    for (const tipo of ['click', 'mousedown', 'mouseup', 'pointerdown', 'pointerup', 'touchstart', 'touchend', 'keydown']) {
+      hospedeiro.addEventListener(tipo, (evento) => evento.stopPropagation());
+    }
     const raiz = hospedeiro.attachShadow({ mode: 'closed' });
     const { acao, fichas } = decisao;
     const principal = fichas[0];
     const sujeito = fichas.length === 1 ? principal.nome : 'estes nomes';
 
+    // As opções de engano tomam o lugar dos botões e da nota, para o card não crescer além do post.
+    const alternarEngano = (aberto) => {
+      engano.toggleAttribute('hidden', !aberto);
+      acoes.toggleAttribute('hidden', aberto);
+      nota.toggleAttribute('hidden', aberto);
+    };
     const engano = el('div', { class: 'engano', hidden: '' },
       'Não marcar mais:',
       el('button', { onclick: () => aoEngano('post') }, naPagina ? 'só esta página' : 'só este post'),
       el('button', { onclick: () => aoEngano('site') }, `${sujeito} neste site`),
       el('button', { onclick: () => aoEngano('sempre') }, `${sujeito} em todo lugar`),
-      el('button', { onclick: () => engano.setAttribute('hidden', '') }, 'Cancelar')
+      el('button', { onclick: () => alternarEngano(false) }, 'Cancelar')
     );
+    const acoes = el('span', { class: 'acoes' },
+      acao === 'esconder' ? el('button', { onclick: aoMostrar }, naPagina ? 'Ver a página mesmo assim' : 'Mostrar') : null,
+      el('button', { onclick: () => api.runtime.sendMessage({ tipo: 'abrir-ficha', id: principal.id }) }, 'Por quê?'),
+      el('button', { onclick: () => alternarEngano(true) }, 'É engano')
+    );
+    const nota = el('span', { class: 'nota' }, principal.situacao === 'registro-indireto'
+      ? 'Aparecer num registro (agenda, voo, doação, evento) não indica irregularidade. Veja qual é o registro em "Por quê?".'
+      : 'Investigação não é condenação. Veja as fontes e a versão de cada um em "Por quê?".');
 
     const aviso = el('div', { class: `aviso ${acao}${naPagina ? ' pagina' : ''}`, role: 'note', 'aria-label': 'Alerta Master' },
       el('span', { class: 'selo' }, `⚠ ${AM.SITUACOES[principal.situacao].rotulo}:`),
       el('span', { class: 'nomes' }, nomes(fichas)),
-      el('span', { class: 'acoes' },
-        acao === 'esconder' ? el('button', { onclick: aoMostrar }, naPagina ? 'Ver a página mesmo assim' : 'Mostrar') : null,
-        el('button', { onclick: () => api.runtime.sendMessage({ tipo: 'abrir-ficha', id: principal.id }) }, 'Por quê?'),
-        el('button', { onclick: () => engano.removeAttribute('hidden') }, 'É engano')
-      ),
-      el('span', { class: 'nota' }, principal.situacao === 'registro-indireto'
-        ? 'Aparecer num registro (agenda, voo, doação, evento) não indica irregularidade. Veja qual é o registro em "Por quê?".'
-        : 'Investigação não é condenação. Veja as fontes e a versão de cada um em "Por quê?".'),
+      acoes,
+      nota,
       engano
     );
-    raiz.append(el('style', {}, ESTILO), aviso);
+    const cobre = !naPagina && acao === 'esconder';
+    raiz.append(el('style', {}, ESTILO), cobre ? el('div', { class: 'cobertura' }, aviso) : aviso);
     return hospedeiro;
   }
 

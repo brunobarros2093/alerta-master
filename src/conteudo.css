@@ -1,4 +1,15 @@
-/* Só o borrão fica no CSS da página; o aviso vive num Shadow DOM com estilo próprio. */
+/* Só o borrão e o posicionamento ficam no CSS da página; o aviso vive num Shadow DOM com estilo próprio. */
+[data-am="esconder"],
+[data-am="marcar"] {
+  position: relative !important;
+}
+
+/* Altura mínima para o card caber sobre posts curtos. */
+[data-am="esconder"] {
+  min-height: 190px !important;
+  overflow: hidden !important;
+}
+
 [data-am="esconder"] > :not(.am-host) {
   filter: blur(14px) grayscale(1) !important;
   pointer-events: none !important;
