@@ -3,3 +3,6 @@ node_modules/
 *.xpi
 .DS_Store
 Thumbs.db
+# Pacote e chave gerados pelo "Compactar extensão" do Chrome: a chave é privada, nunca suba
+*.crx
+*.pem
